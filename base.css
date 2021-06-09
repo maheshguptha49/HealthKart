@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.dim {
+  width: 25%;
+  height: 250px;
+  outline: solid rgb(224, 224, 224) thin;
+  float: left;
+}
+div {
+  width: 80%;
+  height: 250px;
+  margin: auto;
+}
+.flex {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  margin-top: 7%;
+}
+.text1 {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  margin-top: 4%;
+}
+.text {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  color: rgb(198, 199, 183);
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  margin-top: 4%;
+}
+.flex1 {
+  height: 56px;
+  width: 112px;
+  display: flex;
+  margin-top: 7%;
+}
+.buttons {
+  display: flex;
+  height: 100px;
+}
+
+.buttons img:nth-child(2) {
+  margin-left: 2%;
+}
