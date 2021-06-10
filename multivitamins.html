@@ -1,0 +1,1914 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MultiVitamins Tablets</title>
+    <link rel="stylesheet" href="/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        body {
+            display: grid;
+        }
+
+        .cont1 {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            height: 40px;
+        }
+
+        .cont2 {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(244, 244, 244);
+            color: rgb(121, 111, 98);
+            font-size: 90%;
+            height: 40px;
+            align-items: center;
+        }
+
+        .cont2>.c2box1 {
+            width: 70%;
+            margin-left: 11%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .blog {
+            max-width: 20%;
+            overflow: hidden;
+        }
+
+        .cont2>.c2box2 {
+            width: 20%;
+            display: flex;
+        }
+
+        .cont1 input {
+            height: 40px;
+            width: 30vw;
+        }
+
+        .search {
+            background-color: rgb(1, 193, 255);
+        }
+
+        .cont1 .inp-search {
+            display: flex;
+        }
+
+        .cont1 .search {
+            color: white;
+            width: 30px;
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .blue {
+            background-color: rgb(0, 191, 191);
+        }
+
+        .signup,
+        .login:hover {
+            background-color: rgb(0, 191, 191);
+            color: white;
+            border: 1px solid;
+        }
+
+        .login {
+            border: 1px solid rgb(0, 191, 191);
+            color: rgb(0, 191, 191);
+            background-color: white;
+        }
+
+        .cont1 button {
+            height: 100%;
+            width: 80px;
+        }
+
+        .cont1 img {
+            width: 100%;
+            background-color: white !important;
+        }
+
+        #consult-list,
+        #bestsellers-list,
+        #offers-list,
+        #goal-list,
+        #gender-list,
+        #brand-list,
+        #category-list,
+        #cart-list {
+            position: absolute;
+            display: none;
+            background-color: white;
+        }
+
+        #bestsellers-2 {
+            margin-top: -10px;
+            margin-left: 10px;
+        }
+
+        #consult-list p:hover,
+        .bestsellers-2hover p:hover,
+        #offers-list p:hover,
+        #goal-list p:hover,
+        #gender-list p:hover,
+        #brand-list-child2 p+p:hover,
+        #category-list-child2 p+p:hover {
+            color: rgb(0, 191, 191);
+        }
+
+        #consult-list>div,
+        #gender-list>div,
+        #offers-list>div,
+        #goal-list>div {
+            display: flex;
+        }
+
+        #goal-list img {
+            width: 15%;
+        }
+
+        #consult-list p {
+            padding-left: 10px;
+        }
+
+        #brand-list-child2 {
+            display: flex;
+
+        }
+
+        #brand-list-child2>div,
+        #brand-list>div:nth-child(1) {
+            margin-left: 12px;
+        }
+
+        #brand-list-child2 p:nth-child(1),
+        #brand-list>div:nth-child(1) {
+            font-weight: 700;
+        }
+
+        #brand-list>div:nth-child(1) {
+            background-color: rgb(244, 244, 244);
+        }
+
+        #category-list-child1>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gap-margin {
+            margin-top: 100px;
+        }
+
+        #category-list-child2 p:nth-child(1) {
+            font-weight: 600;
+        }
+
+        #category-list-child2>div,
+        #brand-list-child2>div {
+            margin-left: 40px;
+        }
+
+        #category-list-child1,
+        #bestsellers-list>div:nth-child(1) {
+            background-color: rgb(244, 244, 244);
+            min-width: 30%;
+        }
+
+        #category-list-child1>div:hover,
+        #bestsellers-list>div:nth-child(1)>div:hover {
+            background-color: white;
+        }
+
+        #category-list,
+        #brand-list {
+            width: 70%;
+        }
+
+        #brand-list>div:nth-child(1)>p {
+            background-color: rgb(143, 131, 163);
+        }
+
+        #bestsellers-list {
+            width: 25%;
+        }
+
+        #brand-list-child1 {
+            display: flex;
+            width: 10%;
+        }
+
+        #brand-list-child1>p:nth-child(1) {
+            background-color: rgb(244, 244, 244) !important;
+        }
+
+        #category>div:nth-child(1):hover,
+        #brand>div:nth-child(1):hover,
+        #gender>div:nth-child(1):hover,
+        #goal>div:nth-child(1):hover,
+        #offers>div:nth-child(1):hover,
+        #bestsellers>div:nth-child(1):hover,
+        #consult>div:nth-child(1):hover,
+        .Giftcard:hover,
+        .Blog:hover,
+        .c2box2:hover {
+            color: black;
+        }
+
+        #cart-list>div:nth-child(1) {
+            color: rgb(56, 18, 128);
+            margin: 10px;
+            text-align: center;
+        }
+
+        #cart-list>div:nth-child(2) {
+            background-color: rgb(238, 47, 41);
+            color: white;
+            text-align: center;
+            margin: 10px;
+        }
+
+        #cart-list {
+            width: 20%;
+            height: 65px;
+            margin-left: -18%;
+            font-size: 110%;
+            font-weight: 550;
+        }
+
+        .cont3 {
+            display: flex;
+
+        }
+
+
+        #slide-btn2 {
+            background-image: url("https://img9.hkrtcdn.com/react/static/media/common/misc/home-slider-right-v2.svg");
+        }
+
+        #slide-btn1,
+        #slide-btn2 {
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 70px;
+            width: 60px;
+            position: fixed;
+            z-index: 4;
+            left: 90%;
+            top: 220px;
+            background-color: transparent;
+            border: 1px solid transparent;
+        }
+
+        #slide-btn1 {
+            background-image: url("https://img9.hkrtcdn.com/react/static/media/common/misc/home-slider-left-v2.svg");
+            left: 5%;
+        }
+
+        .cursorr:hover {
+            cursor: pointer;
+            color: skyblue;
+        }
+
+        .cont3 {
+            background-color: rgb(248, 248, 248);
+        }
+
+        .cont3-box1 img {
+            width: 6%;
+        }
+
+        .cont3-box1 {
+            width: 17%;
+            margin-left: 10%;
+            border: 1px solid rgb(220, 220, 220);
+        }
+
+        .cont3-box1-offers-1,
+        .cont3-box1-filters,
+        .cont3-box5-discount>div:nth-child(1),
+        .cont3-box6-ratings>div:nth-child(1),
+        .cont3-box7-flashsale>div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cont3-box1-offers-1>span:nth-child(2),
+        .cont3-box1-filters>span:nth-child(2),
+        .cont3-box5-discount span:nth-child(2),
+        .cont3-box6-ratings span:nth-child(2),
+        .cont3-box7-flashsale span:nth-child(2) {
+            color: rgb(0, 191, 191);
+            font-size: 102%;
+            cursor: pointer;
+        }
+
+        .cont3-box1>div:nth-child(1) {
+            font-size: 75%;
+        }
+
+        .cont3-box1>div:nth-child(2),
+        .cont3-box1-filters>span:nth-child(1) {
+            font-size: 140%;
+            font-weight: 600;
+        }
+
+        .cont3-box1>div:nth-child(1)>span:nth-child(3) {
+            font-weight: 600;
+        }
+
+        .cont3-box1 {
+            display: grid;
+            grid-gap: 25px;
+            /* font-size: large; */
+        }
+
+        .w {
+            background-color: white;
+        }
+
+        .cont3-box4-byBrand>ul,
+        .cont3-box1-offers,
+        .cont3-box9-concern>ul {
+            padding: 1.5%;
+            max-height: 270px;
+            overflow-y: scroll;
+            background-color: white;
+            border-top: 1px solid rgb(220, 220, 220);
+            border-bottom: 1px solid rgb(220, 220, 220);
+            transition: all .5s ease-in-out;
+            color: rgb(100, 100, 100);
+        }
+
+        .cont3-box1-offers {
+            padding-left: 0%;
+        }
+
+        .cont3-box4-byBrand input {
+            width: 100%;
+            height: 40px;
+        }
+
+        .cont3-box5-discount>ul,
+        .cont3-box6-ratings>ul,
+        .cont3-box7-flashsale>ul,
+        .cont3-box8-pricerange>ul,
+        .cont3-box10-lifestage>ul,
+        .cont3-box11-noofquantity>ul,
+        .cont3-box12-gender>ul,
+        .cont3-box13-stock>ul {
+            line-height: 1.5rem;
+            padding: 1.5%;
+            max-height: auto;
+            background-color: white;
+            border-top: 1px solid rgb(220, 220, 220);
+            border-bottom: 1px solid rgb(220, 220, 220);
+            transition: all .5s ease-in-out;
+            color: rgb(100, 100, 100);
+        }
+
+        .cont3-box2 {
+            width: 58%;
+            margin-left: 3.5%;
+            /* background-color: red; */
+        }
+
+        .cont3-box2-multivitamin>div {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cont3-box2-multivitamin>div:nth-child(2) p+p {
+            text-decoration: underline;
+            color: rgb(0, 191, 191);
+            cursor: pointer;
+        }
+
+        .cont3-box2-multivitamin>div p {
+            margin-left: 10%;
+        }
+
+        .cont3-box2-multivitamin>div:nth-child(1) {
+            font-weight: 550;
+            font-size: 150%;
+        }
+
+        .cont3-box2>div:nth-child(1) img {
+            width: 100%;
+        }
+
+        .cont3-box2-multivitamin {
+
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #cont3-box2-multivitaminpara {
+            max-height: 50px;
+            overflow-y: hidden;
+            line-height: 1.5;
+            color: rgb(143, 131, 163);
+        }
+
+        #cont3-box2-multivitaminpara-button {
+            color: rgb(0, 191, 191);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+
+
+        .cont3 {
+            padding-top: 30px;
+        }
+
+        .cont3-box2-sort {
+            margin: 20px 0;
+            display: flex;
+            padding: 25px 0;
+            justify-content: space-between;
+            border-top: 1px solid rgb(143, 131, 163);
+            border-bottom: 1px solid rgb(143, 131, 163);
+        }
+
+        .cont3-box2-sort>div+div {
+            color: rgb(143, 131, 163);
+        }
+
+        .cont3-box2-sort select {
+            border: 1px solid transparent;
+            font-size: 110%;
+        }
+
+        .cont3-box2-sort>div:nth-child(1) {
+            background-color: white;
+            line-height: 2;
+            border: 1px solid;
+        }
+
+        .cont3-box2-sort>div:nth-child(2) {
+            display: flex;
+        }
+
+        .cont3-box2-products {
+            display: grid;
+            grid-gap: 4%;
+            grid-template: "a b c ";
+        }
+
+
+
+        .cont3-box2-products>div {
+            width: 100%;
+
+            display: grid;
+            grid-gap: 10px;
+            background-color: white;
+            padding: 5px;
+        }
+
+        .cont3-box2-products>div>div:nth-child(2) img {
+            width: 100%;
+        }
+
+        .cont3-box2-products>div>div:nth-child(4) {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .cont3-box2-products>div>div:nth-child(4)>div:nth-child(1) {
+            display: flex;
+        }
+
+        .cont3-box2-products>div>div:nth-child(1)>p:nth-child(1) {
+            background-color: rgb(227, 90, 90);
+            color: white;
+            padding: 2%;
+        }
+
+        .cont3-box2-products>div>div:nth-child(1),
+        .cont3-box2-products>div>div:nth-child(5) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cont3-box2-products>div>div:nth-child(5)>div:nth-child(2) {
+            border: 1px solid rgb(0, 191, 191);
+            background-color: rgb(241, 247, 247);
+            color: rgb(0, 191, 191);
+            font-size: 95%;
+            cursor: pointer;
+        }
+
+        .cont3-box2-products>div>div:nth-child(5)>div:nth-child(1)>span+span {
+            color: rgb(143, 131, 163);
+            text-decoration: line-through;
+            margin-left: 15%;
+        }
+
+        .cont3-box2-products>div>div:nth-child(6) {
+            display: flex;
+            font-size: 95%;
+            color: rgb(0, 191, 191);
+            border: 1px solid rgb(0, 191, 191);
+            background-color: rgb(228, 255, 255);
+        }
+
+        .cont3-box2-products>div>div:nth-child(1) img {
+            width: 10%;
+        }
+
+        .cont3-box2-products>div:nth-child(2)>div:nth-child(2) img {
+            width: 85%;
+        }
+
+
+        @media only screen and (max-width: 800px) {
+            .cont2 {
+                font-size: 60%;
+            }
+
+            .cont1 {
+                font-size: 60%;
+            }
+
+            .cont3 {
+                font-size: 55%;
+            }
+
+            #slide-btn1,
+            #slide-btn2 {
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 35px;
+                width: 30px;
+                left: 90%;
+                top: 160px;
+            }
+
+            #slide-btn1 {
+                left: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont1 navbar">
+        <div style="font-size: 30px;color:rgb(0,191,191);font-weight: 500;cursor: pointer;"
+            onclick="(location.href='hk.html')">HEALT<span
+                style="color: white;background-color:rgb(0,191,191);">HK</span>ART</div>
+        <div class="inp-search">
+            <input type="text" placeholder="Search for products & brands">
+            <div class="search"><img
+                    src="https://previews.123rf.com/images/sommersby/sommersby1908/sommersby190800014/129073418-white-search-icon-flat-on-blue-background-search-icon-design-search-icon-web-vector-magnifying-glass.jpg"
+                    alt=""></div>
+        </div>
+        <div>Returns & Orders</div>
+        <div><Button class="login">Login</Button></div>
+        <div><Button class="blue signup">Signup</Button></div>
+        <div class="cart" id="c55"><img style="height: 90%;"
+                src="https://img10.hkrtcdn.com/react/static/media/common/misc/shopping-cart.svg" alt="">
+            <div id="cart-list">
+                <div>Your Cart is Empty</div>
+                <div>Proceed to Cart</div>
+            </div>
+        </div>
+    </div>
+    <div class="cont2 navbar">
+        <div class="c2box1">
+            <div class="category" id="category">
+                <div>Category</div>
+                <div id="category-list">
+                    <div id="category-list-child1">
+                        <div id="sports-nutrition">
+                            <p>Sports Nutrition</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
+                        </div>
+                        <div id="vitamins">
+                            <p>Vitamins and supplements </p> <i class="fas fa-greater-than"
+                                style="margin-right: 7px;"></i>
+                        </div>
+                        <div id="ayurvedha">
+                            <p>Ayurvedha & herbs</p><i class="fas fa-greater-than" style="margin-right: 7px;"></i>
+                        </div>
+                        <div id="health">
+                            <p>Health food and drinks</p><i class="fas fa-greater-than" style="margin-right: 7px;"></i>
+                        </div>
+                        <div id="fitness">
+                            <p> Fitness</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
+                        </div>
+                        <div id="wellness">
+                            <p> Wellness</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
+                        </div>
+                        <div id="service">
+                            <p> Service Program</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
+                        </div>
+                    </div>
+                    <div id="category-list-child2">
+
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Brand" id="brand">
+                <div>Brand</div>
+                <div id="brand-list">
+                    <div id="brand-list-child1">
+                        <p style="background-color: white;">All brands</p> <i class="fas fa-greater-than"
+                            style="margin-left: 11px;"></i>
+                    </div>
+                    <div id="brand-list-child2">
+                        <div>
+                            <p>Sports Nutrition</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum </p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum </p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum Nutrition</p>
+                        </div>
+                        <div>
+                            <p>Vitamins and supplements</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum </p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum Nutrition</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                        </div>
+                        <div>
+                            <p>Healthh food & Drinks</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum Nutri</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                        </div>
+                        <div>
+                            <p>Fitness</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum Nn</p>
+                            <p>muscle </p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum N</p>
+                            <p>muscle </p>
+                        </div>
+                        <div>
+                            <p>Wellness</p>
+                            <p>muscle Blaze</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimumition</p>
+                            <p>muscle B</p>
+                            <p>JustGreen</p>
+                            <p>Bgreen</p>
+                            <p>Optimum tion</p>
+                            <p>muscle Bl</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Gender" id="gender">
+                <div>Gender</div>
+                <div id="gender-list">
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-men-icon.svg" alt="">
+                        <p>Men</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-women-icon.svg" alt="">
+                        <p>Women</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Goal" id="goal">
+                <div>Goal</div>
+                <div id="goal-list">
+                    <div><img src="https://img8.hkrtcdn.com/13667/bnr_1366617_o.png" alt="">
+                        <p>Immunity and well being</p>
+                    </div>
+                    <div><img src="https://img4.hkrtcdn.com/13667/smn_image_1366633_o.png" alt="">
+                        <p>Lean muscle mass</p>
+                    </div>
+                    <div><img src="https://img2.hkrtcdn.com/13667/smn_image_1366641_o.png" alt="">
+                        <p>Weight loss</p>
+                    </div>
+                    <div><img src="https://img8.hkrtcdn.com/13667/smn_image_1366637_o.png" alt="">
+                        <p>Stress and relaxation</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/13670/smn_image_1366929_o.png" alt="">
+                        <p>Bulk gain</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Offers" id="offers">
+                <div><i class="fas fa-tshirt" style="color: red;"></i>Offers</div>
+                <div id="offers-list">
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-flash-sale-icon.svg"
+                            alt="">
+                        <p>Flash sale</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-super-saving-icon.svg"
+                            alt="">
+                        <p>Super Savings sale</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-999-store-icon.svg"
+                            alt="">
+                        <p>999 store</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-999-store-icon.svg"
+                            alt="">
+                        <p>599 store</p>
+                    </div>
+                </div>
+            </div>
+            <div class="BestSellers" id="bestsellers">
+                <div>BestSellers</div>
+                <div id="bestsellers-list">
+                    <div class="bestsellers-1">
+                        <div onmouseover="bestsellerschange1()">Sports Nutrition<i class="fas fa-greater-than"
+                                id="best-sellers-button1" style="margin-left: 5px;"></i></div>
+                        <div onmouseover="bestsellerschange2()">Health Nutrition<i class="fas fa-greater-than"
+                                id="best-sellers-button2" style="margin-left: 5px;"></i></div>
+                    </div>
+                    <div id="bestsellers-2">
+                    </div>
+                </div>
+            </div>
+            <div class="Consult" id="consult">
+                <div>Consult</div>
+                <div id="consult-list">
+                    <div><img
+                            src="https://img10.hkrtcdn.com/react/static/media/common/misc/consult-health-profile-icon.svg"
+                            alt="">
+                        <p>Health Profile</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/track-diet-plan-icon.svg"
+                            alt="">
+                        <p>Track diet plan</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/what-we-offer-icon.svg"
+                            alt="">
+                        <p>What do we offer</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/book-consultation-icon.svg"
+                            alt="">
+                        <p>Book a consultation</p>
+                    </div>
+                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/workout-from-home-icon.svg"
+                            alt="">
+                        <p>Workout at Home</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="GiftCard">GiftCard</div>
+            <div class="Blog">Blog Videos & More</div>
+        </div>
+        <div class="c2box2">
+            <div class="store"><i class="fas fa-store"></i></div>
+            <div class="visit">Vist HK stores</div>
+        </div>
+    </div>
+    <div class="cont3">
+        <div class="cont3-box1">
+            <div><span>Home/</span><span> Vitamins & Supplements/</span><span> MultiVitamins</span></div>
+            <div>Browse By</div>
+            <div class="cont3-box1-offers-1"><span>Offers</span><span>Clear</span></div>
+            <div class="cont3-box1-offers w">
+                <div>
+                    <ul type="none">
+                        <li><img
+                                src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">
+                            TrueBasics Advanced Calcium 30 Tablet(S) @ Rs 379<p>Use Coupon :HK50MV</p>
+                        </li>
+                        <li><img
+                                src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">
+                            HealthKart Multivitamin 60 Tablet(S) @ Rs. 325U <p>Use Coupon :HK50MV</p>
+                        </li>
+                        <li><img
+                                src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">
+                            TrueBasics Lung Detox 30 Tablet(S) @ 549 <p>Use Coupon :</p>
+                        </li>
+                        <li><img
+                                src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">
+                            Extra 5% Off On TrueBasicsUse Coupon : BRAINY5
+                            HealthKart Fish Oil 60 Capsules @ Rs.349<p>Use Coupon :</p>
+                        </li>
+                        <li><img
+                                src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">
+                            TrueBasics Multivitamin For Bodybuilding @549Use Coupon : TBMS
+                            HealthKart Omega 3 @549
+                            <p>Use Coupon :</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cont3-box1-filters"><span>Filters</span> <span>Reset All</span></div>
+            <div class="cont3-box3-bestsellers w">
+                <img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">
+                BestSellers
+            </div>
+            <div class="cont3-box4-byBrand ">
+                <div>-By Brand</div>
+                <div><input type="text" placeholder="Search by Brand"></div>
+                <ul type="none">
+                    <img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">
+                    TrueBasics23</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">HealthKart15
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">MuscleBlaze27
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Gritzo1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Myprotein0
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Herbalife1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">
+                        Now1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Amway8
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Healthvit11
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Tara
+                        Nutricare1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">INLIFE3
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">HealthAid5
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Revital
+                        H3</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Fast
+                        & Up3</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Absolute
+                        Nutrition0</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Himalayan
+                        Organics7</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Azani
+                        Active Nutrition6</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">GNC6
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">JustHer5
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Nutrainix5
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Fitspire4
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Krasaliwa4
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Pharmgrade2
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Raskam2
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Smart
+                        Greens2</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Briyo1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Cipla1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Dr.
+                        Kumar's Lifestyle Centre1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">GoNutrition1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">HF
+                        Series1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">HealthyHey
+                        Nutrition1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Healthyments1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">IN21
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">MightyX1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Muscle
+                        Asylum1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">MuscleMonk1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Neurozan1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Nicholas1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">NutraFirst1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Plix
+                        Olena1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Prime
+                        Labz1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Proathlix1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Simply
+                        Nutra1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Steadfast
+                        Nutrition1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Super
+                        Gummy1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Top
+                        Gummy1</li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">VITAWIN1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Vitabiz1
+                    </li>
+                    <li><img
+                            src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">Zeon1
+                    </li>
+
+                </ul>
+            </div>
+            <div class="cont3-box5-discount ">
+                <div><span>-Discount</span><span>Clear</span></div>
+                <ul type="none">
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">20%
+                        And Above</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">40%
+                        And Above</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">80%
+                        And Above</li>
+                </ul>
+            </div>
+            <div class="cont3-box6-ratings ">
+                <div><span>-Ratings</span><span>Clear</span></div>
+                <ul type="none">
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">4
+                        Ratings And
+                        Above</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">3
+                        Ratings And
+                        Above</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">2
+                        Ratings And
+                        Above</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">1
+                        Ratings And
+                        Above</li>
+                </ul>
+            </div>
+            <div class="cont3-box7-flashsale ">
+                <div><span>-Flash Sale</span><span>Clear</span></div>
+                <ul type="none">
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">4
+                        Ratings And
+                        Above</li>
+                </ul>
+            </div>
+            <div class="cont3-box8-pricerange ">
+                <div>-Price Range</div>
+                <ul type="none">
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">600
+                        And Below</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">601-1000
+                    </li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">1001-1500
+                    </li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">1501-2000
+                    </li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">2001-2500
+                    </li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">2501
+                        And Above</li>
+                </ul>
+            </div>
+            <div class="cont3-box9-concern ">
+                <div>-Concern</div>
+                <ul>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Concern</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Bone/Joint Support 22</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Brain And Memory 11</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Digestion 4</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Energy 82</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Eye 10</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Hair Care 8</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt=""> Hair Growth 5</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Heart 11</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Immunity 151
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Skin 13</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Stamina 27</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Strength 6</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Stress Management 2</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Well Being 68</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">Women's Health</li>
+                </ul>
+            </div>
+            <div class="cont3-box10-lifestage ">
+                <div>-LifeStage</div>
+                <ul type="none">
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">Adult
+                        219</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">Children
+                        19</li>
+                    <li><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">Senior
+                        10</li>
+                </ul>
+            </div>
+            <div class="cont3-box11-noofquantity ">
+                <div>-No of Quantity</div>
+                <ul type="none">
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">10 1</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">15 9</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">201 1</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">25 4</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">304 5</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">6010 6</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">903 1</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">1202 1</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">125 2</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt="">180 2</li>
+                </ul>
+            </div>
+            <div class="cont3-box12-gender ">
+                <div>-Gender</div>
+                <ul type="none">
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt=""> Men 174</li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                            alt=""> Women 187</li>
+                </ul>
+            </div>
+            <div class="cont3-box13-stock ">
+                <div>-Stock Availability</div>
+                <ul type="none">
+                    <li><img src="https://pbs.twimg.com/profile_images/677977811626405890/li0xthgs_400x400.png" alt="">
+                        Exclude Sold Out</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="cont3-box2">
+            <div class="cont3-box2-img">
+                <img src="https://img4.hkrtcdn.com/12193/bnr_1219233_o.png" alt="">
+            </div>
+            <div class="cont3-box2-multivitamin">
+                <div>Multivatamin Capsule & Tablet</div>
+                <div>
+                    <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/authenticity.svg" alt="">
+                    <div>
+                        <p>Authenticity Gauranteed</p>
+                        <p>Learn More</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/delivery_icon.svg" alt="">
+                    <p>Quick Delivery</p>
+                </div>
+            </div>
+            <div id="cont3-box2-multivitaminpara">
+                Multivitamin capsule every day is what you need for living an active life. Here in HealthKart we are
+                associated with leading domestic and international brands that are committed to provide quality
+                multivitamin for men, women, and children. We directly approach manufacturers for the products of your
+                need. If you are particularly looking for multivitamin for women, we have covered the leading specific
+                brands for you. GNC, Muscleblaze, TRUEBASICS, INLIFE are few popular names among our wide range of
+                brands.
+            </div>
+            <div id="cont3-box2-multivitaminpara-button">Read More</div>
+            <!-- <hr> -->
+            <div class="cont3-box2-sort">
+                <div>
+                    . Sort by:
+                    <select id="sortproducts" onchange="showoption()">
+                        <option value="popularity">Popularity</option>
+                        <option value="pricelh">Price low to high</option>
+                        <option value="pricehl">Price high to low</option>
+                        <option value="discountlh">Discount low to high</option>
+                        <option value="discounthl">Discount high to low</option>
+                        <option value="ratinghl">Rating high to low</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                        <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                        <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                        <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                    </div>
+                    <div>4.7 (2655 Reviews)</div>
+                </div>
+                <div>Show 24| 48 | 72 items per page</div>
+            </div>
+
+            <div class="cont3-box2-products" id="cont3-box2-products">
+                <div>
+                    <div>
+                        <p>40% off</p>
+                        <img src="https://img10.hkrtcdn.com/react/static/media/common/variant/wishlist/whistlist.svg"
+                            alt="">
+                    </div>
+                    <div>
+                        <img src="https://img4.hkrtcdn.com/14378/prd_1437793-HealthKart-Multivitamin-with-Multimineral-Amino-Acids-Taurine-Ginseng-Extract-60-tablets-Unflavoured_o.jpg"
+                            alt="">
+                    </div>
+                    <div>HealthKart Multivatamin with Multimineral Amino Acids</div>
+                    <div>
+                        <div>
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                        </div>
+                        <div>4.7 (1307)</div>
+                    </div>
+                    <div>
+                        <div><span>389</span><span>689</span></div>
+                        <div><img src="https://img1.hkrtcdn.com/react/static/media/pdp/thunder-buy.svg"
+                                alt=""><span>Quick Buy</span></div>
+                    </div>
+                    <div><img src="https://img2.hkrtcdn.com/react/static/media/loyalty/premium-logo-new.svg" alt="">
+                        <span> Premium Member Price $277</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    var totalproducts = [
+        {
+            discount: 40,
+            name: "Healthkart Multivitamin with Multimineral Amino Acids",
+            rating: 4.7,
+            price: 389,
+            dprice: 389 * 2,
+            imagelink: "https://img4.hkrtcdn.com/14378/prd_1437793-HealthKart-Multivitamin-with-Multimineral-Amino-Acids-Taurine-Ginseng-Extract-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 40,
+            name: "Healthkart Multivitamin Women with Ginseng Biloba",
+            rating: 4.7,
+            price: 599,
+            dprice: 599 * 2,
+            imagelink: "https://img4.hkrtcdn.com/14378/prd_1437793-HealthKart-Multivitamin-with-Multimineral-Amino-Acids-Taurine-Ginseng-Extract-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 10,
+            name: "TrueBasics Multiviitamin -60tablet(s) Ultrafavoured",
+            rating: 4.9,
+            price: 701,
+            dprice: 701 * 2,
+            imagelink: "https://img8.hkrtcdn.com/14368/prd_1436747-HealthKart-Multivitamin-with-Probiotics-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 40,
+            name: "Healthkart Multivitamin with Probiotics -60 tablet(s) Ultrafavoured ",
+            rating: 4.9,
+            price: 299,
+            dprice: 299 * 2,
+            imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 10,
+            name: "TrueBasics Multivit Women 50+- 90 tablet(s) Ultrafavoured",
+            rating: 5.0,
+            price: 1529,
+            dprice: 1529 * 2,
+            imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
+        },
+
+    ]
+
+    let displayproducts = document.getElementById("cont3-box2-products")
+    console.log(totalproducts.length)
+    productsAppend(totalproducts)
+    function productsAppend(totalproducts) {
+        displayproducts.innerHTML = ""
+        let idd = 0
+
+        totalproducts.forEach(function (thing) {
+
+            let div = document.createElement("div")
+            div.innerHTML = `
+                    <div>
+                        <p>${thing.discount}% off</p>
+                        <img src="https://img10.hkrtcdn.com/react/static/media/common/variant/wishlist/whistlist.svg"
+                            alt="">
+                    </div>
+                    <div>
+                        <img src="${thing.imagelink}"
+                            alt="">
+                    </div>
+                    <div>${thing.name}</div>
+                    <div>
+                        <div>
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                            <img src="https://img4.hkrtcdn.com/react/static/media/common/misc/blue-rate.svg" alt="">
+                        </div>
+                        <div>${thing.rating} (1307)</div>
+                    </div>
+                    <div>
+                        <div><span>${thing.price}</span><span>${thing.dprice}</span></div>
+                        <div><img src="https://img1.hkrtcdn.com/react/static/media/pdp/thunder-buy.svg"
+                                alt=""><span id=${idd}>Add to Cart</span></div>
+                    </div>
+                    <div><img src="https://img2.hkrtcdn.com/react/static/media/loyalty/premium-logo-new.svg" alt="">
+                        <span> Premium Member Price $277</span></div>
+`
+            displayproducts.append(div)
+            let carbtn = document.getElementById(idd)
+            carbtn.onclick = function () {
+                addtocart(thing)
+            }
+            idd++
+        })
+    }
+    function addtocart(data) {
+        console.log(data)
+    }
+    function showoption() {
+        let sortproducts = document.getElementById("sortproducts").value
+        console.log(sortproducts)
+        if (sortproducts == "pricehl") {
+            let data = totalproducts
+            data.sort(function (a, b) {
+                return b.price - a.price
+            })
+            productsAppend(data)
+        }
+        else if (sortproducts == "pricelh") {
+            let data = totalproducts
+            data.sort(function (a, b) {
+                return a.price - b.price
+            })
+            productsAppend(data)
+        }
+        else if (sortproducts == "discountlh") {
+            let data = totalproducts
+            data.sort(function (a, b) {
+                return a.discount - b.discount
+            })
+            productsAppend(data)
+        }
+        else if (sortproducts == "discounthl") {
+            let data = totalproducts
+            data.sort(function (a, b) {
+                return b.discount - a.discount
+            })
+            productsAppend(data)
+        }
+        else if (sortproducts == "ratinghl") {
+            let data = totalproducts
+            data.sort(function (a, b) {
+                return b.rating - a.rating
+            })
+            console.log("hello")
+            productsAppend(data)
+        }
+    }
+
+
+
+    var multivitaminparaButton = document.getElementById("cont3-box2-multivitaminpara-button")
+    let pcount = 0
+    multivitaminparaButton.addEventListener("click", function () {
+        let s = document.getElementById("cont3-box2-multivitaminpara")
+        if (pcount == 0) {
+            s.style.maxHeight = "120px"
+            multivitaminparaButton.textContent = "Read Less"
+        }
+        if (pcount == 1) {
+            s.style.maxHeight = "50px"
+            multivitaminparaButton.textContent = "Read More"
+            pcount -= 2
+        }
+        pcount++
+    })
+
+    var cart = document.getElementById("c55")
+    var cartlist = document.getElementById("cart-list")
+    cart.addEventListener("mouseover", function () {
+        cartlist.style.display = "block"
+    })
+    cart.addEventListener("mouseout", function () {
+        cartlist.style.display = "none"
+    })
+    var consult = document.getElementById("consult")
+    var bestsellers = document.getElementById("bestsellers")
+    var consultlist = c = document.getElementById("consult-list")
+    var bestsellerslist = document.getElementById("bestsellers-list")
+    var offers = document.getElementById("offers")
+    var offerslist = document.getElementById("offers-list")
+    var goal = document.getElementById("goal")
+    var goallist = document.getElementById("goal-list")
+    var gender = document.getElementById("gender")
+    var genderlist = document.getElementById("gender-list")
+    var brand = document.getElementById("brand")
+    var brandlist = document.getElementById("brand-list")
+    var category = document.getElementById("category")
+    var categorylist = document.getElementById("category-list")
+    consult.addEventListener("mouseover", function () {
+        consultlist.style.display = "block"
+    })
+    consult.addEventListener("mouseout", function () {
+        consultlist.style.display = "none"
+    })
+    bestsellers.addEventListener("mouseover", function () {
+        bestsellerslist.style.display = "flex"
+
+    })
+    bestsellers.addEventListener("mouseout", function () {
+        bestsellerslist.style.display = "none"
+    })
+    goal.addEventListener("mouseover", function () {
+        goallist.style.display = "block"
+    })
+    goal.addEventListener("mouseout", function () {
+        goallist.style.display = "none"
+    })
+    gender.addEventListener("mouseover", function () {
+        genderlist.style.display = "block"
+    })
+    gender.addEventListener("mouseout", function () {
+        genderlist.style.display = "none"
+    })
+    offers.addEventListener("mouseover", function () {
+        offerslist.style.display = "block"
+    })
+    offers.addEventListener("mouseout", function () {
+        offerslist.style.display = "none"
+    })
+    brand.addEventListener("mouseover", function () {
+        brandlist.style.display = "flex"
+    })
+    brand.addEventListener("mouseout", function () {
+        brandlist.style.display = "none"
+    })
+    category.addEventListener("mouseover", function () {
+        categorylist.style.display = "flex"
+    })
+    category.addEventListener("mouseout", function () {
+        categorylist.style.display = "none"
+    })
+    var categorylistchild2 = document.getElementById("category-list-child2")
+    var sportsnutrition = document.getElementById("sports-nutrition")
+    var vitamins = document.getElementById("vitamins")
+    var ayurvedha = document.getElementById("ayurvedha")
+    var health = document.getElementById("health")
+    var fitness = document.getElementById("fitness")
+    var wellness = document.getElementById("wellness")
+    var service = document.getElementById("service")
+    var fas = document.querySelectorAll(".fa-greater-than")
+    sportsnutrition.addEventListener("mouseover", function () {
+        fas[0].style.color = "rgb(0,191,191)"
+        let change1 = document.createElement("div")
+        change1 = `
+                <div>
+                        <p>Protiens</p>
+                        <p>Whey Protiens</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Protien for Women</p>
+                        <p>Protien blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+               </div>
+            <div>
+                <p>Gainers</p>
+                               <p>Weight Gainers</p>
+                               <p>Mass Gainers</p>
+                               <p>Herbal Weight Gainers</p>
+                </div>
+                          <div>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                           </div>
+                           <div>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                               <p>Creatine</p>
+                               <p>BCAA's</p>
+                               <p>Carb Blends</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Other supports</p>
+                               <p>Ciruline Malate</p>
+                           </div>
+                           <div>
+                               <p>Workout</p>
+                               <p>Consult workers</p>
+                               <p>L carmitine</p>
+                               <p>Multivatamins</p>
+                               <p>body Building</p>
+                               <p>Pre Hormone</p>
+                               <p>ZMA</p>
+                           </div>`
+        categorylistchild2.innerHTML = change1
+        categorylistchild2.style.display = "flex"
+    })
+    vitamins.addEventListener("mouseover", function () {
+        fas[1].style.color = "rgb(0,191,191)"
+        categorylistchild2.innerHTML = `
+         <div>
+                    <div>
+                        <p> Blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+                        <p>Plant Protiens</p>
+                        
+                        </div>
+                        <div class="gap-margin">
+                        <p>Omega</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        </div>
+            </div>
+            <div>
+                <p onclick="(location.href='multivitamins.html')" class="cursorr">Multivitamins</p>
+                               <p>Weight Gainers</p>
+                               <p>Mass Gainers</p>
+                               <p>Herbal Weight Gainers</p>
+                               <p>Casein protiens</p>
+                               <p>Soy Protiens</p>
+                </div>
+                          <div>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                               
+                           </div>
+                           <div>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                               <p>Creatine</p>
+                               <p>BCAA's</p>
+                               <p>Carb Blends</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               
+                           </div>
+                           <div>
+                               <p>Workout</p>
+                               <p>Consult workers</p>
+                               <p>L carmitine</p>
+                               <p>Multivatamins</p>
+                               <p>body Building</p>
+                               <p>Pre Hormone</p>
+                               
+                           </div>
+         `
+    })
+    ayurvedha.addEventListener("mouseover", function () {
+        fas[2].style.color = "rgb(0,191,191)"
+        categorylistchild2.innerHTML = `
+         <div>
+                    <div>
+                        <p> Blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Pre Hormone</p>
+                        </div>
+                        <div class="gap-margin">
+                        <p>Omega</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        </div>
+            </div>
+            <div>
+                    <div>
+                        <p> Blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Pre Hormone</p>
+                        </div>
+                        <div class="gap-margin">
+                        <p>Omega</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        </div>
+            </div>
+            <div>
+                    <div>
+                        <p> Blends</p>
+                        <p>Casein protiens</p>
+                        <p>Plant Protiens</p>
+                        
+                        <p>Pre Hormone</p>
+                        <p>Plant Protiens</p>
+                        </div>
+                        <div class="gap-margin">
+                        <p>Omega</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        </div>
+            </div>
+            <div>
+                    <div>
+                        <p> Blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Pre Hormone</p>
+                        </div>
+                        <div class="gap-margin">
+                        <p>Omega</p>
+                        <p>Beginners Protiens</p>
+                        
+                        </div>
+            </div>
+            <div>
+                    <div>
+                        <p> Blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Pre Hormone</p>
+                        
+                        </div>
+                        <div class="gap-margin">
+                        <p>Omega</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        </div>
+            </div>
+            
+         `
+    })
+    health.addEventListener("mouseover", function () {
+        fas[3].style.color = "rgb(0,191,191)"
+        categorylistchild2.innerHTML = `
+          <div>
+                        <p>Protiens</p>
+                        <p>Whey Protiens</p>
+                        <p>Beginners Protiens</p>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Protien for Women</p>
+                        <p>Protien blends</p>
+                        <p>Casein protiens</p>
+                        <p>Soy Protiens</p>
+               </div>
+            <div>
+                <p>Gainers</p>
+                               <p>Weight Gainers</p>
+                               <p>Mass Gainers</p>
+                               <p>Herbal Weight Gainers</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Other supports</p>
+                               <p>Ciruline Malate</p>
+                </div>
+                          <div>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Other supports</p>
+                               <p>Ciruline Malate</p>
+                           </div>
+                           <div>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                               <p>Creatine</p>
+                               <p>BCAA's</p>
+                               <p>Carb Blends</p>
+                               
+                           </div>
+                           <div>
+                               <p>Workout</p>
+                               <p>Consult workers</p>
+                               <p>L carmitine</p>
+                               <p>Multivatamins</p>
+                               <p>body Building</p>
+                               <p>Pre Hormone</p>
+                               <p>ZMA</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Other supports</p>
+                               <p>Ciruline Malate</p>
+                           </div
+         `
+    })
+    fitness.addEventListener("mouseover", function () {
+        fas[4].style.color = "rgb(0,191,191)"
+        categorylistchild2.innerHTML = `
+          <div>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Whey Protiens</p>
+                        <p>Beginners Protiens</p>
+                         <p>Protiens</p>
+               </div>
+            <div>
+                <p>Gainers</p>
+                               <p>Weight Gainers</p>
+                               <p>Mass Gainers</p>
+                               <p>Herbal Weight Gainers</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Other supports</p>
+                               <p>Ciruline Malate</p>
+                               <p>Protien for Women</p>
+                              <p>Protien blends</p>
+                </div>
+                          <div>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               
+                           </div>
+                           <div>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                               <p>Creatine</p>
+                               <p>BCAA's</p>
+                               <p>Carb Blends</p>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                               <p>Creatine</p>
+                               <p>BCAA's</p>
+                           </div>
+                           <div>
+                               <p>Workout</p>
+                               <p>Consult workers</p>
+                               <p>L carmitine</p>
+                               <p>Multivatamins</p>
+                               <p>body Building</p>
+                             
+                           </div
+         `
+    })
+    wellness.addEventListener("mouseover", function () {
+        fas[5].style.color = "rgb(0,191,191)"
+        categorylistchild2.innerHTML = `
+          <div>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        <p>Plant Protiens</p>
+                        <p>Whey Protiens</p>
+                        <p>Beginners Protiens</p>
+                         <p>Protiens</p>
+                         <p>Whey Protiens</p>
+                        <p>Beginners Protiens</p>
+                         <p>Protiens</p>
+               </div>
+            <div>
+                <p>Gainers</p>
+                               <p>Weight Gainers</p>
+                               <p>Mass Gainers</p>
+                               <p>Herbal Weight Gainers</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Other supports</p>
+                               
+                </div>
+                          <div>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                               <p>Electrolytes</p>
+                               <p>Nitric Oxide</p>
+                               <p>Ciruline Malate</p>
+                               <p>Protien for Women</p>
+                              <p>Protien blends</p>
+                              <p>Protien for Women</p>
+                              <p>Protien blends</p>
+                           </div>
+                           <div>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                               <p>Creatine</p>
+                               <p>BCAA's</p>
+                               <p>Carb Blends</p>
+                               <p>Pre/Post</p>
+                               <p>Pre-Workout</p>
+                              
+                           </div>
+                           <div>
+                               <p>Workout</p>
+                               <p>Consult workers</p>
+                               <p>L carmitine</p>
+                               <p>Multivatamins</p>
+                               <p>body Building</p>
+                              <p>Creatine</p>
+                           </div
+         `
+    })
+    service.addEventListener("mouseover", function () {
+        fas[6].style.color = "rgb(0,191,191)"
+        categorylistchild2.innerHTML = `
+          <div>
+                        <p>Whey Protien Isolate</p>
+                        <p>Raw WheyProtiens</p>
+                        <p>Plant Protiens</p>
+                        
+               </div>
+            <div>
+                <p>Gainers</p>
+                               <p>Weight Gainers</p>
+                               <p>Mass Gainers</p>
+                               
+                </div>
+                          <div>
+                               <p>Protein Foods </p>
+                               <p>Protein Cookies</p>
+                               <p>Peanut Butter</p>
+                              
+                           </div>
+                          
+         `
+    })
+    function bestsellerschange1() {
+        let change = document.getElementById("bestsellers-2")
+        document.getElementById("best-sellers-button1").style.color = "rgb(0,191,191)"
+        change.innerHTML = `
+                            <p>Protien Powder</p>
+                            <p>Vitamin Powder</p>
+                            <p>Fat Burners</p>
+                            <p>Protien Powder</p>
+                            <p>Vitamin Powder</p>
+                            <p>Fat Burners</p>
+                            <p>Protien Powder</p>
+                            <p>Vitamin Powder</p>
+                            <p>Fat Burners</p>
+                            <p>Protien Powder</p>
+                            <p>Vitamin Powder</p>
+                            <p>Fat Burners</p>
+                            <p>Vitamin Powder</p>`
+        change.setAttribute("class", "bestsellers-2hover")
+    }
+    function bestsellerschange2() {
+        let change = document.getElementById("bestsellers-2")
+        document.getElementById("best-sellers-button2").style.color = "rgb(0,191,191)"
+        change.innerHTML = `
+                            <p>Multi Vitamins</p>
+                            <p>Omega 3</p>
+                            <p>Ayurvedha and herbs</p>
+                            <p>Multi Vitamins</p>
+                            <p>Omega 3</p>
+                            <p>Ayurvedha and herbs</p>
+                            <p>Multi Vitamins</p>
+                            <p>Omega 3</p>
+                            <p>Ayurvedha and herbs</p>
+                            <p>Ayurvedha and herbs</p>`
+        change.setAttribute("class", "bestsellers-2hover")
+    }
+    sportsnutrition.addEventListener("mouseout", function () {
+        fas[0].style.color = "black"
+    })
+    vitamins.addEventListener("mouseout", function () {
+        fas[1].style.color = "black"
+    })
+    ayurvedha.addEventListener("mouseout", function () {
+        fas[2].style.color = "black"
+    })
+    health.addEventListener("mouseout", function () {
+        fas[3].style.color = "black"
+    })
+    fitness.addEventListener("mouseout", function () {
+        fas[4].style.color = "black"
+    })
+    wellness.addEventListener("mouseout", function () {
+        fas[5].style.color = "black"
+    })
+    service.addEventListener("mouseout", function () {
+        fas[6].style.color = "black"
+    })
+
+</script>
