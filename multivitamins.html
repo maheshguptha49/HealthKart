@@ -833,6 +833,9 @@
             height: 66px;
             cursor: pointer;
         }
+        .cont3 li{
+            cursor: pointer;
+        }
         @media only screen and (max-width: 800px) {
             .cont2 {
                 font-size: 60%;
@@ -1140,14 +1143,14 @@
             <div class="cont3-box4-byBrand ">
                 <div>-By Brand</div>
                 <div><input type="text" placeholder="Search by Brand"></div>
-                <ul type="none">
-                    <li> <img
+                <ul type="none" class="filters-list">
+                    <li id="truebasics"> <img
                             src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">
                         TrueBasics23</li>
-                    <li><img
+                    <li id="healthkart"><img
                             src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">HealthKart15
                     </li>
-                    <li><img
+                    <li id="muscleblaze"><img
                             src="https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png">MuscleBlaze27
                     </li>
                     <li><img
@@ -1294,33 +1297,33 @@
             <div class="cont3-box5-discount ">
                 <div><span>-Discount</span><span>Clear</span></div>
                 <ul type="none">
-                    <li><img
+                    <li id="d20"><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">10%
+                        And Above</li>
+                    <li id="d40"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">20%
                         And Above</li>
-                    <li><img
+                    <li id="d80"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">40%
-                        And Above</li>
-                    <li><img
-                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">80%
                         And Above</li>
                 </ul>
             </div>
             <div class="cont3-box6-ratings ">
                 <div><span>-Ratings</span><span>Clear</span></div>
                 <ul type="none">
-                    <li><img
+                    <li id="r4"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">4
                         Ratings And
                         Above</li>
-                    <li><img
+                    <li id="r3"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">3
                         Ratings And
                         Above</li>
-                    <li><img
+                    <li id="r2"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">2
                         Ratings And
                         Above</li>
-                    <li><img
+                    <li id="r1"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">1
                         Ratings And
                         Above</li>
@@ -1338,22 +1341,22 @@
             <div class="cont3-box8-pricerange ">
                 <div>-Price Range</div>
                 <ul type="none">
-                    <li><img
+                    <li id="p0-600"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">600
                         And Below</li>
-                    <li><img
+                    <li id="p601-1000"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">601-1000
                     </li>
-                    <li><img
+                    <li id="p1001-1500"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">1001-1500
                     </li>
-                    <li><img
+                    <li id="p1501-2000"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">1501-2000
                     </li>
-                    <li><img
+                    <li id="p2001-2500"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">2001-2500
                     </li>
-                    <li><img
+                    <li id="p2501-5000"><img
                             src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-circle-outline-512.png">2501
                         And Above</li>
                 </ul>
@@ -2571,14 +2574,79 @@
             dprice: 1529 * 2,
             imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
         },
-        {
+        {//new101
             discount: 50,
             name: "JustHer Immunity with Herbs- 60 tablets Unflavoured",
             rating: 5.0,
             price: 349,
             dprice: 349 * 2,
             imagelink: "https://img2.hkrtcdn.com/13058/prd_1305721-JustHer-Immunity-with-Herbs-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 10,
+            name: "TrueBasics Multivit Women 50+- 90 tablet(s) Ultrafavoured",
+            rating: 5.0,
+            price: 1229,
+            dprice: 1229 * 2,
+            imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
+        },
+        {//new
+            discount: 40,
+            name: "Healthkart Multivitamin with Multimineral Amino Acids",
+            rating: 4.7,
+            price: 1309,
+            dprice: 1309 * 2,
+            imagelink: "https://img8.hkrtcdn.com/14368/prd_1436747-HealthKart-Multivitamin-with-Probiotics-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 10,
+            name: "TrueBasics Multivit men 50+- 90 tablet(s) Ultrafavoured",
+            rating: 4.8,
+            price: 2404,
+            dprice: 2404 * 2,
+            imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 10,
+            name: "TrueBasics Multivit Women 50+- 90 tablet(s) Ultrafavoured",
+            rating: 4.8,
+            price: 2209,
+            dprice: 2209 * 2,
+            imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 10,
+            name: "TrueBasics Multivit Women 50+- 90 tablet(s) Ultrafavoured",
+            rating: 5.0,
+            price: 2309,
+            dprice: 2309 * 2,
+            imagelink: "https://img8.hkrtcdn.com/13781/prd_1378047-TrueBasics-Multivit-Women-50-90-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 50,
+            name: "JustHer Immunity with Herbs- 60 tablets Unflavoured",
+            rating: 5.0,
+            price: 6009,
+            dprice: 6009 * 2,
+            imagelink: "https://img2.hkrtcdn.com/13058/prd_1305721-JustHer-Immunity-with-Herbs-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 50,
+            name: "JustHer Immunity with Herbs- 60 tablets Unflavoured",
+            rating: 5.0,
+            price: 5001,
+            dprice: 5001 * 2,
+            imagelink: "https://img2.hkrtcdn.com/13058/prd_1305721-JustHer-Immunity-with-Herbs-60-tablets-Unflavoured_o.jpg",
+        },
+        {
+            discount: 50,
+            name: "JustHer Immunity with Herbs- 60 tablets Unflavoured",
+            rating: 5.0,
+            price: 3109,
+            dprice: 3109 * 2,
+            imagelink: "https://img2.hkrtcdn.com/13058/prd_1305721-JustHer-Immunity-with-Herbs-60-tablets-Unflavoured_o.jpg",
         }
+        
     ]
 
     let displayproducts = document.getElementById("cont3-box2-products")
@@ -2670,6 +2738,398 @@
             productsAppend(data)
         }
     }
+
+
+    let truebasics=document.getElementById("truebasics")
+    let healthkart=document.getElementById("healthkart")
+    let muscleblaze=document.getElementById("muscleblaze")
+    let fcount=0
+    truebasics.addEventListener("click",function(){
+        
+       if(fcount==0){
+           let temp = truebasics.children
+           temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+           let temp1 = healthkart.children
+           temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+           let temp2 = muscleblaze.children
+           temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+           let data1 = totalproducts
+           let data2 = []
+           for (i = 0; i < data1.length; i++) {
+               let temp = data1[i].name.split(" ")
+               if (temp[0] == "TrueBasics") {
+                   data2.push(data1[i])
+               }
+           }
+           productsAppend(data2)
+
+       }
+        
+        if(fcount==1){
+            productsAppend(totalproducts)
+            let temp1 = truebasics.children
+            temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+            fcount=-1
+        }
+        fcount++
+
+    })
+    let fcount1=0
+    healthkart.addEventListener("click",function(){
+        if(fcount1==0){
+         let temp = healthkart.children
+        temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+        let temp1 = truebasics.children
+        temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+        let temp2 = muscleblaze.children
+        temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+        let data1=totalproducts
+        let data2=[]
+        for(i=0;i<data1.length;i++){
+           let temp=data1[i].name.split(" ")
+           if(temp[0]=="Healthkart"){
+               data2.push(data1[i])
+           }
+        }
+        productsAppend(data2)
+        }
+        if (fcount1 == 1) {
+            productsAppend(totalproducts)
+            let temp1 = healthkart.children
+            temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+            fcount1 = -1
+        }
+        fcount1++
+    })
+    let fcount2=0
+    muscleblaze.addEventListener("click", function () {
+        if(fcount2==0){
+         let temp = muscleblaze.children
+        temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+        let temp1 = healthkart.children
+        temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+        let temp2 = truebasics.children
+        temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+            let data1 = totalproducts
+            let data2 = []
+            for (i = 0; i < data1.length; i++) {
+                let temp = data1[i].name.split(" ")
+                if (temp[0] == "MuscleBlaze") {
+                    data2.push(data1[i])
+                }
+            }
+            productsAppend(data2)
+            }
+            if (fcount2 == 1) {
+            productsAppend(totalproducts)
+            let temp1 = muscleblaze.children
+            temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+            fcount2 = -1
+        }
+        fcount2++
+        })
+        let discount20 = document.getElementById("d20")
+        let discount40 = document.getElementById("d40")
+        let discount80 = document.getElementById("d80")
+         
+        discount20.addEventListener("click",function(){
+            let temp = discount20.children
+            temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+            let data1=totalproducts
+            let data2=[]
+            for(i=0;i<data1.length;i++){
+                if(data1[i].discount>=10){
+                    data2.push(data1[i])
+                }
+            }
+            productsAppend(data2)
+        })
+        discount40.addEventListener("click",function(){
+             let temp = discount40.children
+            temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+            let data1=totalproducts
+            let data2=[]
+            for(i=0;i<data1.length;i++){
+                if(data1[i].discount>=20){
+                    data2.push(data1[i])
+                }
+            }
+            productsAppend(data2)
+        })
+        discount80.addEventListener("click",function(){
+             let temp = discount80.children
+            temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+            let data1=totalproducts
+            let data2=[]
+            for(i=0;i<data1.length;i++){
+                if(data1[i].discount>=40){
+                    data2.push(data1[i])
+                }
+            }
+            productsAppend(data2)
+        })
+        let rating4 = document.getElementById("r4")
+            let rating3 = document.getElementById("r3")
+            let rating2 = document.getElementById("r2")
+            let rating1 = document.getElementById("r1")
+        rating4.addEventListener("click", function () {
+                let temp = rating4.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].rating >= 4) {
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+            })
+            rating3.addEventListener("click", function () {
+                let temp = rating3.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].rating >= 3) {
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+            })
+            rating2.addEventListener("click", function () {
+                let temp = rating2.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].rating >= 2) {
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+            })
+            rating1.addEventListener("click", function () {
+                    let temp = rating1.children
+                    temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                    let data1 = totalproducts
+                    let data2 = []
+                    for (i = 0; i < data1.length; i++) {
+                        if (data1[i].rating >= 1) {
+                            data2.push(data1[i])
+                        }
+                    }
+                    productsAppend(data2) 
+                })
+        let price0 = document.getElementById("p0-600")
+        let price600=document.getElementById("p601-1000")
+        let price1001 = document.getElementById("p1001-1500")
+        let price1501 = document.getElementById("p1501-2000")
+        let price2001 = document.getElementById("p2001-2500")
+        let price2501=document.getElementById("p2501-5000")
+        // console.log(price0,price1001,price1501,price2001,price2501)
+        let pricecount1=0
+        price0.addEventListener("click",function(){
+            if(pricecount1==0){
+                let temp = price0.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                 let temp1 = price600.children
+                temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                 let temp2 = price1001.children
+                temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                 let temp3 = price1501.children
+                temp3[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                 let temp4 = price2001.children
+                temp4[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                 let temp5 = price2501.children
+                temp5[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+               
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].price <= 600) {
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+            }
+            else if(pricecount1==1){
+                let temp = price0.children
+                temp[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                pricecount1=-1
+                productsAppend(totalproducts)
+            }
+            pricecount1++
+        })
+         let pricecount2=0
+        price600.addEventListener("click",function(){
+            if(pricecount2==0){
+                let temp = price600.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                 let temp1 = price0.children
+                temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp2 = price1001.children
+                temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp3 = price1501.children
+                temp3[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp4 = price2001.children
+                temp4[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp5 = price2501.children
+                temp5[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].price > 600 &&data1[i].price<=1000) {
+                       
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+                console.log(data2)
+            }
+            else if(pricecount2==1){
+                let temp = price600.children
+                temp[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                pricecount2=-1
+                productsAppend(totalproducts)
+            }
+            pricecount2++
+        })
+        let pricecount3=0
+        price1001.addEventListener("click",function(){
+            if(pricecount3==0){
+                let temp = price1001.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                 let temp1 = price600.children
+                temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp2 = price0.children
+                temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp3 = price1501.children
+                temp3[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp4 = price2001.children
+                temp4[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp5 = price2501.children
+                temp5[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].price >= 1001 &&data1[i].price<=1500){
+                       
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+                console.log(data2)
+            }
+            else if(pricecount3==1){
+                let temp = price1001.children
+                temp[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                pricecount3=-1
+                productsAppend(totalproducts)
+            }
+            pricecount3++
+        })
+        let pricecount4=0
+        price1501.addEventListener("click",function(){
+            if(pricecount4==0){
+                let temp = price1501.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                 let temp1 = price600.children
+                temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp2 = price1001.children
+                temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp3 = price0.children
+                temp3[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp4 = price2001.children
+                temp4[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp5 = price2501.children
+                temp5[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].price > 1501 &&data1[i].price<=2000) {
+                       
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+                console.log(data2)
+            }
+            else if(pricecount4==1){
+                let temp = price1501.children
+                temp[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                pricecount4=-1
+                productsAppend(totalproducts)
+            }
+            pricecount4++
+        })
+        let pricecount5=0
+        price2001.addEventListener("click",function(){
+            if(pricecount5==0){
+                let temp = price2001.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                 let temp1 = price600.children
+                temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp2 = price1001.children
+                temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp3 = price1501.children
+                temp3[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp4 = price0.children
+                temp4[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp5 = price2501.children
+                temp5[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].price > 2001 &&data1[i].price<=2500) {
+                       
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+                console.log(data2)
+            }
+            else if(pricecount5==1){
+                let temp = price2001.children
+                temp[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                pricecount5=-1
+                productsAppend(totalproducts)
+            }
+            pricecount5++
+        })
+        let pricecount6=0
+        price2501.addEventListener("click",function(){
+            if(pricecount6==0){
+                let temp = price2501.children
+                temp[0].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrahCq5mblU2ubO1m55XWiBOcEDzvnU_LFA&usqp=CAU"
+                 let temp1 = price600.children
+                temp1[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp2 = price1001.children
+                temp2[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp3 = price1501.children
+                temp3[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp4 = price2001.children
+                temp4[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let temp5 = price0.children
+                temp5[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                let data1 = totalproducts
+                let data2 = []
+                for (i = 0; i < data1.length; i++) {
+                    if (data1[i].price >=2501) {
+                       
+                        data2.push(data1[i])
+                    }
+                }
+                productsAppend(data2)
+                console.log(data2)
+            }
+            else if(pricecount6==1){
+                let temp = price2501.children
+                temp[0].src = "https://cdn3.iconfinder.com/data/icons/eldorado-stroke-symbols/40/shape_square-512.png"
+                pricecount6=-1
+                productsAppend(totalproducts)
+            }
+            pricecount6++
+        })
 
 
 
