@@ -1,0 +1,410 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Payment</title>
+    <style>
+        *{
+            font-family:Roboto, sans-serif;
+        }
+        .cont1{
+            display: flex;
+            width: 80%;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left:10%;
+        }
+        .cont1>div:nth-child(2)>div:nth-child(2),
+        .cont1>div:nth-child(2)>div:nth-child(4){
+            background-color: black;
+            width: 120px;
+            height: 0.5px;
+            margin-top: 5px;
+        }
+        .cont1>div:nth-child(2)>div{
+            display: flex;
+            align-items: center;
+           
+        }
+        .cont1>div:nth-child(2){
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-around;
+            color: rgb(147,147,147);
+            margin-left: 10%;
+            font-size: 80%;
+           
+        }
+         .cont1>div:nth-child(2)>div:nth-child(2n-1){
+            padding:0 10px ;
+         }
+        .logo{
+            color: rgb(0,191,191);
+          
+           font-size: 210%;
+        }
+        .logo>span{
+            background-color: rgb(0,191,191);
+            color: white;
+        }
+        #squarebox{
+              width: 20px;
+              height: 20px;
+              background: #fff;
+              border: 2px solid #9e9e9e;
+              border-radius: 2px;
+              cursor: pointer;
+        }
+        
+        .cod>div:nth-child(1)>span:nth-child(1){
+            
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            border-radius: 100%;
+            border: 2px solid #00c0bf;
+            cursor: pointer;
+        }
+        .cod>div:nth-child(1)>span:nth-child(1)>span{
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            margin-left: 3.8px;
+            margin-top: 3.8px;
+            background-color: #00c0bf;
+            border-radius: 100%;
+            border: 2px solid #00c0bf;
+            cursor: pointer;
+        }
+        .cont2{
+            background-color: rgb(248,248,248);
+            height: 100%;
+            margin: 0 -20px;
+        }
+        .cont2box1{
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .c2b1b1>div:nth-child(2){
+            display: flex;
+        }
+        .c2b1b1{
+            border: 1px solid rgb(211,212,213);
+            background-color: white;
+        }
+        .c2b1b1>div:nth-child(1){
+            padding: 25px 3%;
+            font-size: 140%;
+            font-weight:540;
+             border-bottom: 1px solid rgb(211,212,213);
+             font-weight: 550;
+        }
+        .c2b1b1>div:nth-child(2)>div:nth-child(1)>div{
+            border-top: 1px solid rgb(211,212,213);
+            border-right: 1px solid rgb(211,212,213);
+            padding: 25px 20px;
+            font-size: 110%;
+            font-weight:550;
+        }
+        .c2b1b1>div:nth-child(2)>div:nth-child(1)>div:nth-child(7),.c2b1b1>div:nth-child(2)>div:nth-child(1)>div:nth-child(8){
+            padding: 10px 25px;
+        }
+        .offers::before{
+            content: "%";
+            border-radius: 100%;
+            color: white;
+            border: 3px solid rgb(0,168,52);
+            background-color:rgb(0,168,52);
+        }
+        .offers{
+            color: rgb(0,168,52);
+        }
+        .cod li{
+            color: rgb(87,88,89);
+            padding: 10px 0;
+        }
+        .cod li:nth-child(-n+2){
+            font-size: 80%;
+            padding: 5px 0;
+        }
+        .cod li p{
+            margin: 2px 0;
+        }
+        .cod>div:nth-child(1) span:nth-child(1){
+            margin-left:5px;
+            margin-top: 8px ;
+        }
+        .cont2box1{
+            display: flex;
+        }
+        .c2b1b2>div:nth-child(-n+2){
+            background-color: white;
+            border: 1px solid rgb(211,212,213);
+            margin-bottom: 20px ;
+        }
+        .c2b1b2>div:nth-child(1)>p{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 8%;
+        }
+        .c2b1b2>div:nth-child(1)>p>span:nth-child(2){
+            color: rgb(0,191,191);
+            cursor: pointer;
+        }
+        .c2b1b2>div:nth-child(1)>p:nth-child(3),.c2b1b2>div:nth-child(2)>p>span:nth-child(1){
+            color: rgb(147,147,147);
+        }
+        .c2b1b2>div:nth-child(2)>p{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+        .c2b1b2>div:nth-child(2)>p:nth-child(4)>span+span{
+            color: green;
+        }
+        .c2b1b2>div:nth-child(2)>p:nth-child(1),.c2b1b2>div:nth-child(2)>p>span+span{
+            font-weight: 550;
+        }
+        .c2b1b2>div:nth-child(2)>p:nth-child(1),.c2b1b2>div:nth-child(2)>p:nth-child(7){
+          padding-bottom: 20px;
+          border-bottom:1px solid rgb(211,212,213);
+        }
+        .c2b1b2>div:nth-child(2)>p:nth-child(-n+6){
+          border-bottom:2px dotted rgb(211,212,213);
+          padding-bottom: 20px;
+        }
+        .c2b1b2>div{
+            margin: 0 25px ;
+        }
+         .c2b1b2>div:nth-child(3)>div:nth-child(1){
+          padding-left: 15%;
+         }
+         .c2b1b2>div:nth-child(3)>div{
+             padding-top: 30px;
+         }
+         .cont2{
+             height: max-content;
+         }
+         .c2b1b2>div:nth-child(1)>p>span:nth-child(1)>span+span{
+            position: relative;
+            bottom: 2.5px;
+         }
+         #pay-button>div{
+             color: white;
+             text-align: center;
+             background-color: rgb(223,70,34);
+             padding: 20px 0;
+             width: 75%;
+             margin: auto;
+             border-radius: 3px ;
+             cursor: pointer;
+         }
+        
+         #squarebox:checked{
+                border: 1px solid green;
+         }
+         .input-radio {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            border-radius: 100%;
+            border: 2px solid #747474;
+           
+            /* transform: translateY(-50%); */
+            cursor: pointer;
+         }
+         .input-radio:checked {
+                border: 2px solid #00c0bf;
+          }
+          #puus>label{
+              --size:25px;
+              min-width: var(--size);
+              height: var(--size);
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+          }
+          /* .checkmark{
+               --gap: 3px;
+  --border: 2px;
+  --check-color: #ff5722;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  
+          } */
+          .cod li:nth-child(2)~li{
+              font-size: 80%;
+          }
+          @media only screen and (max-width: 800px) {
+             *{
+                 font-size: 95%;
+             }
+            .cont1>div:nth-child(2n){
+               width: 100px;
+            }
+            #squarebox{
+                width: 10px;
+                position: relative;
+                top: 7px;
+            }
+          }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <div><div class="logo">HEALT<span>HK</span>ART</div></div>
+        <div>
+            <div><img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="">CART</div>
+            <div></div>
+            <div><img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="">ADRESS</div>
+            <div></div>
+            <div><img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-blue.svg" alt="">PAYMENT</div>
+        </div>
+    </div>
+    <div class="cont2">
+        <div class="cont2box1">
+            <div class="c2b1b1">
+                <div> Choose Payment Options</div>
+                <div>
+                    <div>
+                    <div id="puu">Pay Using UPI</div>
+                    <div id="cod">Cash On Delivery</div>
+                    <div id="dc">Debit Card</div>
+                    <div id="cc">Credit Card</div>
+                    <div id="pp">PhonePe</div>
+                    <div id="pw">Paytm Wallet</div>
+                    <div id="ap">
+                        <p>Amazon Pay</p>
+                        <p class="offers">Offers Available</p>
+                    </div>
+                    <div id="mw">
+                        <p>Mobikwik Wallet</p>
+                        <p class="offers">Offers Available</p>
+                    </div>
+                    <div id="ow">Other Wallets</div>
+                    <div id="ib">Internet Banking</div>
+                    <div id="ep">EMI or Pay Later</div>
+                    </div>
+                    <div>
+                        <div class="cod" id="cods">
+                            <div><span><span></span></span> <span>CASH ON DELIVERY</span></div>
+                            <div>
+                                <ul>
+                                    <li>You will not earn any HK Cash through COD</li>
+                                    <li>For order below ₹500, we charge ₹30 for COD</li>
+                                    <li type="none">
+                                        <div> <input type="checkbox" id="squarebox"><span>Check the box here to confirm &amp; complete your purchase through Cash On
+                                        Delivery
+                                        option.</span></div>
+                                    </li>
+                                    <li type="none">
+                                        <p>Avoid out of cash & change problems. Use Credit/Debit card, Internet banking,</p>
+                                        <p>Wallets or UPI for convenient experience.</p>
+                                        <p>HK Cash is not valid on Cash on Delivery orders. Use Prepaid Payment Mode</p>
+                                        <p>to Earn & Redeem HK Cash</p>
+                                    </li>
+                                    <li type="none" id="pay-button">
+                                        <div>Pay Later  <span>-₹529</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div id="puus">
+                            <label class="radiobtn-phonepe">
+                               
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                                <span>Pay with Phonepe</span>
+                            </label>
+                        </div> -->
+                    </div>
+                </div>
+                            
+            </div>
+            <div class="c2b1b2">
+                <div>
+                    <p><span><span><img src="https://img8.hkrtcdn.com/react/static/media/payment/location-outline.svg" alt=""> </span> <span id="pin-state">
+                        Delivery at 50001,New Jersey</span></span> <span onclick="changeAdress()">Change</span></p>
+                    <p id="user-name">Tony Soprano</p>
+                    <p id="address-number">251 Broadway Street
+                    Penns Avenue, New Jersey(NJ),Phone:987654321</p>
+                </div>
+                <div>
+                    <p>Order Summary</p>
+                    <p><span>Total</span> <span>₹1000</span></p>
+                    <p><span>HealthKart Price</span> <span>₹499</span></p>
+                    <p><span><img src="https://img2.hkrtcdn.com/react/static/media/common/premium-outline.svg" alt="">Discount</span> <span>-₹501</span></p>
+                    <p><span>COD</span> <span>₹30</span></p>
+                    <p><span>Shipping</span> <span>FREE</span></p>
+                    <p><span>Total Payable</span> <span>₹529</span></p>
+                </div>
+                <div>
+                    <div><img src="https://img8.hkrtcdn.com/react/static/media/payment/hk_cash_coin.svg" class="hkcash" width="15px"> 100% Safe & Secure Payments</div>
+                    <div class="payment-icons">
+                        <img data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg" alt="visacard" itemprop=""
+                            imagewidth="50" imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
+                            imagealt="visacard"><img
+                            data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg" alt="mastercard"
+                            itemprop="" imagewidth="50"
+                            imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
+                            imagealt="mastercard"><img
+                            data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg" alt="americanexpress" itemprop=""
+                            imagewidth="50" imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
+                            imagealt="americanexpress"><img
+                            data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg" alt="wallet" itemprop=""
+                            imagewidth="50" imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
+                            imagealt="wallet"><img
+                            data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg" alt="netbankingNew"
+                            itemprop="" imagewidth="50"
+                            imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
+                            imagealt="netbankingNew"><img
+                            data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg" alt="emi" itemprop=""
+                            imagewidth="50" imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
+                            imagealt="emi"><img data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
+                            class="offscreenimage lazy" width="50" height="25"
+                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg" alt="cashondeliveryNew" itemprop=""
+                            imagewidth="50" imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
+                            imagealt="cashondeliveryNew">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    
+    function changeAdress(){
+        let pd=document.getElementById("pin-state")
+        let un=document.getElementById("user-name")
+        let an=document.getElementById("address-number")
+        let pdp=prompt("give pin code and state")
+        let unp=prompt("give name")
+        let ap=prompt("give adress")
+        let np=prompt("give number")
+        pd.innerHTML=`Delivery at ${pdp}`
+        un.innerHTML=unp
+        an.innerHTML=`${ap},Phone:${np}`
+    }
+    
+</script>
