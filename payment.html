@@ -232,12 +232,12 @@
           }
           /* .checkmark{
                --gap: 3px;
-  --border: 2px;
-  --check-color: #ff5722;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  display: inline-block;
+               --border: 2px;
+               --check-color: #ff5722;
+               width: var(--size);
+               height: var(--size);
+               border-radius: 50%;
+               display: inline-block;
   
           } */
           .cod li:nth-child(2)~li{
@@ -274,7 +274,7 @@
             <div class="c2b1b1">
                 <div> Choose Payment Options</div>
                 <div>
-                    <div>
+                    <div id="payment-divs">
                     <div id="puu">Pay Using UPI</div>
                     <div id="cod">Cash On Delivery</div>
                     <div id="dc">Debit Card</div>
@@ -317,14 +317,17 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div id="puus">
-                            <label class="radiobtn-phonepe">
-                               
-                                <input type="radio">
-                                <span class="checkmark"></span>
-                                <span>Pay with Phonepe</span>
-                            </label>
-                        </div> -->
+                        <div id="dcs">
+                            <div>Enter Card Details</div>
+                            <input type="text"  placeholder="Card holder name">
+                            <input type="text"  placeholder="Card Number">
+                            <select name="" id="monthoptions">
+                                <option value="Expiry MM">Expiry Mm</option>
+                            </select>
+                            <select name="" id="yearoptions">
+                                <option value="Expiry YY">Expiry YY</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                             
@@ -406,5 +409,28 @@
         un.innerHTML=unp
         an.innerHTML=`${ap},Phone:${np}`
     }
-    
+    let monthoptions=document.getElementById("monthoptions")
+    let yearoptions=document.getElementById("yearoptions")
+    let cod=document.getElementById("cod")
+    let paymentdivs=document.getElementById("payment-divs")
+    cod.addEventListener("click",function(){
+        let data=paymentdivs.children
+        for(i=0;i<data.length;i++){     
+           data[i].style.backgroundColor="white"
+        }
+        cod.style.backgroundColor="rgb(242,255,255)"
+        let cods=document.getElementById("cods")
+        cods.style.display="block"
+    })
+    let dc=document.getElementById("dc")
+    dc.addEventListener("click",function(){
+        let dcs=document.getElementById("dcs")
+        let datap=dcs.parentElement
+        let data=datap.children
+        for(i=0;i<data.length;i++){
+            if(i!=1){
+                data[i].style.display="none"
+            }
+        }
+    })
 </script>
