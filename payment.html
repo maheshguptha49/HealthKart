@@ -6,47 +6,70 @@
     <title>Order Payment</title>
     <style>
         *{
-            font-family:Roboto, sans-serif;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        .cont1{
+        .header-container {
+            /* position: fixed; */
+            width: 105%;
+            height: 65px;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 12%);
+            display: flex;
+            align-items: center;
+        }
+
+        .cont1 {
             display: flex;
             width: 80%;
             justify-content: flex-start;
             align-items: center;
-            margin-left:10%;
+            margin-left: 10%;
+           
         }
+
         .cont1>div:nth-child(2)>div:nth-child(2),
-        .cont1>div:nth-child(2)>div:nth-child(4){
+        .cont1>div:nth-child(2)>div:nth-child(4) {
             background-color: black;
             width: 120px;
             height: 0.5px;
             margin-top: 5px;
         }
-        .cont1>div:nth-child(2)>div{
+
+        .cont1>div:nth-child(2)>div {
             display: flex;
             align-items: center;
-           
         }
-        .cont1>div:nth-child(2){
+
+        .cont1>div:nth-child(2) {
             padding: 0 10px;
             display: flex;
             justify-content: space-around;
-            color: rgb(147,147,147);
+            color: rgb(147, 147, 147);
             margin-left: 10%;
             font-size: 80%;
-           
         }
-         .cont1>div:nth-child(2)>div:nth-child(2n-1){
-            padding:0 10px ;
-         }
-        .logo{
-            color: rgb(0,191,191);
-          
-           font-size: 210%;
+
+        .cont1>div:nth-child(2)>div:nth-child(2n-1) {
+            padding: 0 10px;
         }
-        .logo>span{
-            background-color: rgb(0,191,191);
+
+        .logo {
+            font-size: 25.3px;
+            color: rgb(0, 191, 191);
+            font-weight: 500;
+            cursor: pointer;
+            letter-spacing: 3px;
+            height: 49px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo>span {
             color: white;
+            background-color: rgb(0, 191, 191);
+            height: 49px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 3px;
         }
         #squarebox{
               width: 20px;
@@ -188,6 +211,7 @@
          }
          .cont2{
              height: max-content;
+             margin-top: 5px;
          }
          .c2b1b2>div:nth-child(1)>p>span:nth-child(1)>span+span{
             position: relative;
@@ -244,7 +268,7 @@
           }
           #dcs,#puus{
              padding-left: 8%;
-             /* font-size: 120%; */
+            
           }
           .cod{
               padding-left: 6%;
@@ -305,6 +329,9 @@
               #puus img{
                   vertical-align: middle;
                   margin:0 22px;
+                  max-width: 75px;
+                  height: 22px;
+                  margin-top: 20px;
               }
               #puus>div>div{
                   font-size: large;
@@ -340,17 +367,53 @@
                  width: 400px;
              }
           }
+          .cashon{
+              font-size: 14px;
+              color: #212121;
+              outline: none;
+              box-sizing: border-box;
+              font-weight: 500;
+              margin-bottom: 18px;
+              padding-left: 20px;
+          }
+         #payment-divs{
+             width: 43%;
+         }
+         #payment-divs>div{
+             cursor: pointer;
+         }
+         .middle-div{
+             width: 700px !important;
+         }
+         .checkout-flex{
+             display: flex;
+         }
+         .offers{
+             font-size: 70%;
+             margin-top: -10px;
+         }
+        
     </style>
 </head>
 <body>
-    <div class="cont1">
-        <div><div class="logo">HEALT<span>HK</span>ART</div></div>
-        <div>
-            <div><img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="">CART</div>
-            <div></div>
-            <div><img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="">ADRESS</div>
-            <div></div>
-            <div><img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-blue.svg" alt="">PAYMENT</div>
+        <div class="header-container">
+        <div class="cont1">
+            <div>
+                <div class="logo">HEALT<span>HK</span>ART</div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="" />CART
+                </div>
+                <div></div>
+                <div>
+                    <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-blue.svg" alt="" />ADDRESS
+                </div>
+                <div></div>
+                <div>
+                    <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="" />PAYMENT
+                </div>
+            </div>
         </div>
     </div>
     <div class="cont2">
@@ -377,15 +440,15 @@
                     <div id="ib">Internet Banking</div>
                     <div id="ep">EMI or Pay Later</div>
                     </div>
-                    <div>
+                    <div class="middle-div">
                         <div class="cod" id="cods">
-                            <div><span><span></span></span> <span>CASH ON DELIVERY</span></div>
+                            <div><span><span></span></span> <span  class="cashon">CASH ON DELIVERY</span></div>
                             <div>
                                 <ul>
                                     <li>You will not earn any HK Cash through COD</li>
                                     <li>For order below ₹500, we charge ₹30 for COD</li>
                                     <li type="none">
-                                        <div> <input type="checkbox" id="squarebox"><span>Check the box here to confirm &amp; complete your purchase through Cash On
+                                        <div class="checkout-flex"> <input type="checkbox" id="squarebox"><span>Check the box here to confirm &amp; complete your purchase through Cash On
                                         Delivery
                                         option.</span></div>
                                     </li>
@@ -439,7 +502,7 @@
                                 <div>
                                 <input type="radio" name="upi" id="phonepe">
                                 <img class="upi-image" src="https://s3-ap-southeast-1.amazonaws.com/hkprod/12028/normal_1202725_o.jpg" alt="PhonePe">
-                                <p>Phonepe</p>
+                                <p>PhonePe</p>
                                 </div>
                                 <div >
                                     <div class="paylater">Pay Securely <span>₹529</span></div>
