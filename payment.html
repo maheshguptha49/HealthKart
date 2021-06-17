@@ -837,30 +837,6 @@
   </body>
 </html>
 <script>
-  let tot_pay = document.getElementById("tot_pay");
-  let hp_price = document.getElementById("hp_price");
-  let di_price = document.getElementById("di_price");
-  let tp_price = document.getElementById("tp_price");
-
-  let in_data = JSON.parse(localStorage.getItem("in_cart"));
-  var sum_dis = 0;
-  for (var i = 0; i < in_data.length; i++) {
-    sum_dis = sum_dis + Number(in_data[i].discprice) * in_data[i].count;
-  }
-  var sum_ac = 0;
-  for (var i = 0; i < in_data.length; i++) {
-    sum_ac = sum_ac + Number(in_data[i].price) * in_data[i].count;
-  }
-  hp_price.innerHTML = `${sum_dis}`;
-  tot_pay.innerHTML = `${sum_ac}`;
-  di_price.innerHTML = `-${sum_ac - sum_dis}`;
-  tp_price.innerHTML = `${sum_dis}`;
-  let cod_tot = document.getElementById("cod_tot");
-  cod_tot.innerHTML = `${Number(sum_dis)}`;
-
-  let cod_tot1 = document.getElementById("cod_tot1");
-  cod_tot1.innerHTML = `${Number(sum_dis) + Number(30)}`;
-
   let healthkart_delivery_address = JSON.parse(
     localStorage.getItem("healthkart_address_data")
   );
@@ -1002,4 +978,27 @@
       }
     }
   });
+  let tot_pay = document.getElementById("tot_pay");
+  let hp_price = document.getElementById("hp_price");
+  let di_price = document.getElementById("di_price");
+  let tp_price = document.getElementById("tp_price");
+
+  let in_data = JSON.parse(localStorage.getItem("in_cart"));
+  var sum_dis = 0;
+  for (var i = 0; i < in_data.length; i++) {
+    sum_dis = sum_dis + Number(in_data[i].discprice) * in_data[i].count;
+  }
+  var sum_ac = 0;
+  for (var i = 0; i < in_data.length; i++) {
+    sum_ac = sum_ac + Number(in_data[i].price) * in_data[i].count;
+  }
+  hp_price.innerHTML = `${sum_dis}`;
+  tot_pay.innerHTML = `${sum_ac}`;
+  di_price.innerHTML = `-${sum_ac - sum_dis}`;
+  tp_price.innerHTML = `${sum_dis}`;
+  let cod_tot = document.getElementById("cod_tot");
+  cod_tot.innerHTML = `${Number(sum_dis)}`;
+
+  let cod_tot1 = document.getElementById("cod_tot1");
+  cod_tot1.innerHTML = `${Number(sum_dis) + Number(30)}`;
 </script>

@@ -1,3 +1,4 @@
+  
 <html lang="en">
 
 <head>
@@ -7,286 +8,336 @@
     <title> MultiVitamins Tablets</title>
     <link rel="stylesheet" href="/fontawesome-free-5.15.3-web/css/all.css">
     <style>
-        * {
-            font-family: 'Roboto', sans-serif;
-
-        }
+        
 
         body {
             display: grid;
         }
+           
+         *{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
-        .cont1 {
-            width: 80%;
-            margin: auto;
-            display: flex;
-            justify-content: space-evenly;
-            height: 40px;
+    .cont1 {
+      width: 80%;
+      margin: 1.5% auto;
+      display: flex;
+      justify-content: space-evenly;
+      height: 40px;
+      align-items: center;
+    }
+
+    .cont2 {
+      display: flex;
+      justify-content: space-around;
+      background-color: rgb(255 255 255);
+      color: #1d1d1d;
+      font-size: 90%;
+      height: 40px;
+      align-items: center;
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      margin: 1% 0 0;
+      padding: 0.5% 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.45px;
+    }
+
+    .cont2>.c2box1 {
+      width: 70%;
+      margin-left: 11%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .blog {
+      max-width: 20%;
+      overflow: hidden;
+    }
+
+    .cont2>.c2box2 {
+      width: 20%;
+      display: flex;
+    }
+
+
+    .cont1 .inp-search {
+      display: flex;
+      position: relative;
+      width: 37.5%;
+      height: 37px;
+
+    }
+.search-icon{
+  position: absolute;
+    left: 94%;
+    top: 30%;
+    height: 50%;
+    width: 4%;
+}
+
+.search-input{
+  border: 1px solid #a0a0a0;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    color: #3c3c3c;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .45px;
+    line-height: 19px;
+    margin: 0;
+    height: 37px;
+    width: 100%;
+}
+
+.search-input:focus{
+  border: #a0a0a0 1px solid;
+  outline: none;
+}
+    .blue {
+      background-color: rgb(0, 191, 191);
+    }
+
+    .signup:hover,
+    .login:hover {
+      background-color: rgb(0, 191, 191);
+      color: white;
+      border: 1px solid;
+      border-radius: 5px;
+    }
+
+    .signup, .login {
+      border: 1px solid rgb(0, 191, 191);
+      color: rgb(0, 191, 191);
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    .cont1 button {
+      height: 100%;
+    width: 80px;
+    padding: 4% 6%;
+    }
+
+   
+
+    #consult-list,
+    #bestsellers-list,
+    #offers-list,
+    #goal-list,
+    #gender-list,
+    #brand-list,
+    #category-list,
+    #cart-list {
+      position: absolute;
+      padding-top: 5px;
+      margin-left: -2%;
+      display: none;
+      background-color: white;
+      padding: 0 1%;
+      z-index: 20;
+    }
+
+    #bestsellers-2 {
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 100px;
+    }
+
+    #consult-list p:hover,
+    .bestsellers-2hover p:hover,
+    #offers-list p:hover,
+    #goal-list p:hover,
+    #gender-list p:hover,
+    #brand-list-child2 p+p:hover,
+    #category-list-child2 p+p:hover {
+      color: rgb(0, 191, 191);
+    }
+
+    #consult-list>div,
+    #gender-list>div,
+    #offers-list>div,
+    #goal-list>div {
+      display: flex;
+    }
+
+    #goal-list img {
+      width: 15%;
+    }
+
+    #consult-list p {
+      padding-left: 10px;
+    }
+
+    #brand-list-child2 {
+      display: flex;
+    }
+
+    #brand-list-child2>div,
+    #brand-list>div:nth-child(1) {
+      margin-left: 12px;
+    }
+
+    #brand-list-child2 p:nth-child(1),
+    #brand-list>div:nth-child(1) {
+      font-weight: 700;
+    }
+
+    #brand-list>div:nth-child(1) {
+      background-color: rgb(244, 244, 244);
+    }
+
+    #category-list-child1>div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gap-margin {
+      margin-top: 100px;
+    }
+
+    #category-list-child2 p:nth-child(1) {
+      font-weight: 600;
+    }
+
+    #category-list-child2>div,
+    #brand-list-child2>div {
+      margin-left: 40px;
+    }
+
+    #category-list-child1,
+    #bestsellers-list>div:nth-child(1) {
+      background-color: rgb(244, 244, 244);
+      min-width: 25%;
+    }
+
+    #category-list-child1>div:hover,
+    #bestsellers-list>div:nth-child(1)>div:hover {
+      background-color: white;
+    }
+
+    #category-list,
+    #brand-list {
+      width: 70%;
+    }
+
+    #brand-list>div:nth-child(1)>p {
+      background-color: rgb(143, 131, 163);
+    }
+
+    #bestsellers-list {
+      width: 25%;
+    }
+
+    #brand-list-child1 {
+      display: flex;
+      width: 10%;
+    }
+
+    #brand-list-child1>p:nth-child(1) {
+      background-color: rgb(244, 244, 244) !important;
+    }
+
+    #category>div:nth-child(1):hover,
+    #brand>div:nth-child(1):hover,
+    #gender>div:nth-child(1):hover,
+    #goal>div:nth-child(1):hover,
+    #offers>div:nth-child(1):hover,
+    #bestsellers>div:nth-child(1):hover,
+    #consult>div:nth-child(1):hover,
+    .Giftcard:hover,
+    .Blog:hover,
+    .c2box2:hover {
+      color: black;
+      cursor: pointer;
+    }
+
+    #cart-list>div:nth-child(1) {
+      color: rgb(56, 18, 128);
+      margin: 10px;
+      text-align: center;
+    }
+
+    #cart-list>div:nth-child(2) {
+      background-color: rgb(238, 47, 41);
+      color: white;
+      text-align: center;
+      margin: 10px;
+    }
+
+    #cart-list {
+      width: 20%;
+      height: 65px;
+      margin-left: -18%;
+      font-size: 110%;
+      font-weight: 550;
+    }
+
+    #cont3 {
+      display: flex;
+      transition: all 2s;
+    }
+
+    .cursorr:hover {
+      cursor: pointer;
+      color: skyblue;
+    }
+
+    .cont2 p {
+      padding: 5px 5%;
+      font-size: 90%;
+    }
+
+    @media only screen and (max-width: 800px) {
+      .cont2 {
+        font-size: 60%;
+      }
+
+      .cont1 {
+        font-size: 60%;
+        width: 100%;
+        right: 0px;
+      }
+
+      .cont3 img {
+        width: 100%;
+      }
+
+      .cont1 div {
+        padding: 0 5;
+      }
+    }
+
+    #bestsellers-list{
+           width: 250px !important;
         }
 
-        .cont2 {
-            display: flex;
-            justify-content: space-around;
-            background-color: rgb(244, 244, 244);
-            color: rgb(121, 111, 98);
-            font-size: 90%;
-            height: 40px;
-            align-items: center;
+      
+  .bestsellers-1>div{
+        padding: 8% 2%;
+       
         }
 
-        .cont2 {
-            margin-top: 40px;
+        #bestsellers-2{
+            width: 100px;
         }
-
-        .cont1 {
-            position: fixed;
-            right: 10%;
-            background-color: rgb(244, 244, 244);
-            top: 0;
-            padding-top: 5px;
-        }
-
-        .cont2>.c2box1 {
-            width: 70%;
-            margin-left: 11%;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .blog {
-            max-width: 20%;
-            overflow: hidden;
-        }
-
-        .cont2>.c2box2 {
-            width: 20%;
-            display: flex;
-        }
-
-        .cont1 input {
-            height: 40px;
-            width: 30vw;
-        }
-
-        .search {
-            background-color: rgb(1, 193, 255);
-        }
-
-        .cont1 .inp-search {
-            display: flex;
-        }
-
-        .cont1 .search {
-            color: white;
-            width: 30px;
-            font-size: 25px;
-            padding: 10px;
-        }
-
-        .blue {
-            background-color: rgb(0, 191, 191);
-        }
-
-        .signup,
-        .login:hover {
-            background-color: rgb(0, 191, 191);
-            color: white;
-            border: 1px solid;
-        }
-
-        .login {
-            border: 1px solid rgb(0, 191, 191);
-            color: rgb(0, 191, 191);
-            background-color: white;
-        }
-
-        .cont1 button {
-            height: 100%;
-            width: 80px;
-        }
-
-        .cont1 img {
-            width: 100%;
-            background-color: white !important;
-        }
-
-        #consult-list,
-        #bestsellers-list,
-        #offers-list,
-        #goal-list,
-        #gender-list,
-        #brand-list,
-        #category-list,
-        #cart-list {
-            position: absolute;
-            display: none;
-            background-color: white;
-        }
-
-        #bestsellers-2 {
-            margin-top: -10px;
-            margin-left: 10px;
-        }
-
-        #consult-list p:hover,
-        .bestsellers-2hover p:hover,
-        #offers-list p:hover,
-        #goal-list p:hover,
-        #gender-list p:hover,
-        #brand-list-child2 p+p:hover,
-        #category-list-child2 p+p:hover {
-            color: rgb(0, 191, 191);
-        }
-
-        #consult-list>div,
-        #gender-list>div,
-        #offers-list>div,
-        #goal-list>div {
-            display: flex;
-        }
-
-        #goal-list img {
-            width: 15%;
-        }
-
-        #consult-list p {
-            padding-left: 10px;
-        }
-
-        #brand-list-child2 {
-            display: flex;
-
-        }
-
-        #brand-list-child2>div,
-        #brand-list>div:nth-child(1) {
-            margin-left: 12px;
-        }
-
-        #brand-list-child2 p:nth-child(1),
-        #brand-list>div:nth-child(1) {
-            font-weight: 700;
-        }
-
-        #brand-list>div:nth-child(1) {
-            background-color: rgb(244, 244, 244);
-        }
-
-        #category-list-child1>div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .gap-margin {
-            margin-top: 100px;
-        }
-
-        #category-list-child2 p:nth-child(1) {
-            font-weight: 600;
-        }
-
-        #category-list-child2>div,
-        #brand-list-child2>div {
-            margin-left: 40px;
-        }
-
-        #category-list-child1,
-        #bestsellers-list>div:nth-child(1) {
-            background-color: rgb(244, 244, 244);
-            min-width: 30%;
-        }
-
-        #category-list-child1>div:hover,
-        #bestsellers-list>div:nth-child(1)>div:hover {
-            background-color: white;
-        }
-
-        #category-list,
-        #brand-list {
-            width: 70%;
-        }
-
-        #brand-list>div:nth-child(1)>p {
-            background-color: rgb(143, 131, 163);
-        }
-
-        #bestsellers-list {
-            width: 25%;
-        }
-
-        #brand-list-child1 {
-            display: flex;
-            width: 10%;
-        }
-
-        #brand-list-child1>p:nth-child(1) {
-            background-color: rgb(244, 244, 244) !important;
-        }
-
-        #category>div:nth-child(1):hover,
-        #brand>div:nth-child(1):hover,
-        #gender>div:nth-child(1):hover,
-        #goal>div:nth-child(1):hover,
-        #offers>div:nth-child(1):hover,
-        #bestsellers>div:nth-child(1):hover,
-        #consult>div:nth-child(1):hover,
-        .Giftcard:hover,
-        .Blog:hover,
-        .c2box2:hover {
-            color: black;
-        }
-
-        #cart-list>div:nth-child(1) {
-            color: rgb(56, 18, 128);
-            margin: 10px;
-            text-align: center;
-        }
-
-        #cart-list>div:nth-child(2) {
-            background-color: rgb(238, 47, 41);
-            color: white;
-            text-align: center;
-            margin: 10px;
-        }
-
-        #cart-list {
-            width: 20%;
-            height: 65px;
-            margin-left: -18%;
-            font-size: 110%;
-            font-weight: 550;
-        }
-
-        .cont3 {
-            display: flex;
-
-        }
+   
 
 
-        #slide-btn2 {
-            background-image: url("https://img9.hkrtcdn.com/react/static/media/common/misc/home-slider-right-v2.svg");
-        }
 
-        #slide-btn1,
-        #slide-btn2 {
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 70px;
-            width: 60px;
-            position: fixed;
-            z-index: 4;
-            left: 90%;
-            top: 220px;
-            background-color: transparent;
-            border: 1px solid transparent;
-        }
 
-        #slide-btn1 {
-            background-image: url("https://img9.hkrtcdn.com/react/static/media/common/misc/home-slider-left-v2.svg");
-            left: 5%;
-        }
 
+
+       .cont3{
+           display: flex;
+       }
         .cursorr:hover {
             cursor: pointer;
             color: skyblue;
@@ -848,10 +899,9 @@
                 right: 0px;
             }
 
-            .cont3 {
-                font-size: 55%;
-
-            }
+             .cont3 {
+                 font-size: 55%; 
+            } 
 
             .cont4,
             .cont5 {
@@ -861,244 +911,309 @@
                 max-width: 100%;
                 overflow: hidden;
             }
+             .cont3-box1-offers li{
+            margin-left: -50%;
+            
         }
+        .cont3-box2-sort>div:nth-child(1){
+           height: 18px;
+        }
+        .cont3-box2-sort img{
+            width: 15%;
+        }
+        }
+        .cont3-box1-offers li{
+            margin-left: -10%;
+            
+        }
+        .fa-greater-than{
+            display: none;
+        }
+
+      #cart-list>div:nth-child(1) {
+    background-color: rgb(238, 47, 41);
+    color: white;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+   #number_cartip{
+      float: left;
+      background-color:orangered;
+      margin-left: 5%;
+      border-radius: 50%;
+      width: 20px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+    }
     </style>
 </head>
 
 <body>
 
     <div class="cont1 navbar">
-        <div style="font-size: 30px;color:rgb(0,191,191);font-weight: 500;cursor: pointer;"
-            onclick="(location.href='hk.html')" class="logo">HEALT<span
-                style="color: white;background-color:rgb(0,191,191);">HK</span>ART</div>
+        <div style="
+          font-size: 25.3px;
+          color: rgb(0, 191, 191);
+          font-weight: 500;
+          cursor: pointer;
+          letter-spacing: 3px;
+          height: 49px;
+          display: flex;
+          align-items: center;
+        " onclick="(location.href='hk.html')">
+          HEALT<span style="
+            color: white;
+            background-color: rgb(0, 191, 191);
+            height: 49px;
+            display: flex;
+            align-items: center;
+          ">HK</span>ART
+        </div>
         <div class="inp-search">
-            <input type="text" placeholder="Search for products & brands">
-            <div class="search"><img
-                    src="https://previews.123rf.com/images/sommersby/sommersby1908/sommersby190800014/129073418-white-search-icon-flat-on-blue-background-search-icon-design-search-icon-web-vector-magnifying-glass.jpg"
-                    alt=""></div>
+         
+        
+          <input type="text" placeholder="Search for products & brands" class="search-input" />
+          
+          <img class="search-icon"
+          src="https://img10.hkrtcdn.com/react/static/media/common/header/search-icon-grey-2.svg"
+          alt="5" />
         </div>
         <div>Returns & Orders</div>
-        <div><Button class="login">Login</Button></div>
-        <div><Button class="blue signup">Signup</Button></div>
-        <div class="cart" id="c55"><img style="height: 90%;"
-                src="https://img10.hkrtcdn.com/react/static/media/common/misc/shopping-cart.svg" alt="">
-            <div id="cart-list">
-                <div>Your Cart is Empty</div>
-                <div>Proceed to Cart</div>
-            </div>
-        </div>
+        <div><button class="login">Login</button></div>
+        <div><button class="blue signup">Signup</button></div>
+       <div class="cart" id="c55" style="width: 70px;">
+      <img style="height: 90%; float: left;" src="https://img10.hkrtcdn.com/react/static/media/common/misc/shopping-cart.svg"/>
+        <div id="number_cartip">0</div>
+      <div id="cart-list">
+        <div id="location-to-cart" onclick="(location.href='gotocart.html')">Proceed to Cart</div>
+      </div>
     </div>
-    <div class="cont2 navbar">
+      </div>
+      <div class="cont2 navbar">
         <div class="c2box1">
-            <div class="category" id="category">
-                <div>Category</div>
-                <div id="category-list">
-                    <div id="category-list-child1">
-                        <div id="sports-nutrition">
-                            <p>Sports Nutrition</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
-                        </div>
-                        <div id="vitamins">
-                            <p>Vitamins and supplements </p> <i class="fas fa-greater-than"
-                                style="margin-right: 7px;"></i>
-                        </div>
-                        <div id="ayurvedha">
-                            <p>Ayurvedha & herbs</p><i class="fas fa-greater-than" style="margin-right: 7px;"></i>
-                        </div>
-                        <div id="health">
-                            <p>Health food and drinks</p><i class="fas fa-greater-than" style="margin-right: 7px;"></i>
-                        </div>
-                        <div id="fitness">
-                            <p> Fitness</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
-                        </div>
-                        <div id="wellness">
-                            <p> Wellness</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
-                        </div>
-                        <div id="service">
-                            <p> Service Program</p> <i class="fas fa-greater-than" style="margin-right: 7px;"></i>
-                        </div>
-                    </div>
-                    <div id="category-list-child2">
-
-                        <div>
-
-                        </div>
-                    </div>
+          <div class="category" id="category">
+            <div>Category</div>
+            <div id="category-list">
+              <div id="category-list-child1">
+                <div id="sports-nutrition">
+                  <p>Sports Nutrition</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
-            </div>
-            <div class="Brand" id="brand">
-                <div>Brand</div>
-                <div id="brand-list">
-                    <div id="brand-list-child1">
-                        <p style="background-color: white;">All brands</p> <i class="fas fa-greater-than"
-                            style="margin-left: 11px;"></i>
-                    </div>
-                    <div id="brand-list-child2">
-                        <div>
-                            <p>Sports Nutrition</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum </p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum </p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum Nutrition</p>
-                        </div>
-                        <div>
-                            <p>Vitamins and supplements</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum </p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum Nutrition</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                        </div>
-                        <div>
-                            <p>Healthh food & Drinks</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum Nutri</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                        </div>
-                        <div>
-                            <p>Fitness</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum Nn</p>
-                            <p>muscle </p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum N</p>
-                            <p>muscle </p>
-                        </div>
-                        <div>
-                            <p>Wellness</p>
-                            <p>muscle Blaze</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimumition</p>
-                            <p>muscle B</p>
-                            <p>JustGreen</p>
-                            <p>Bgreen</p>
-                            <p>Optimum tion</p>
-                            <p>muscle Bl</p>
-                        </div>
-                    </div>
+                <div id="vitamins">
+                  <p>Vitamins and supplements</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
-            </div>
-            <div class="Gender" id="gender">
-                <div>Gender</div>
-                <div id="gender-list">
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-men-icon.svg" alt="">
-                        <p>Men</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-women-icon.svg" alt="">
-                        <p>Women</p>
-                    </div>
+                <div id="ayurvedha">
+                  <p>Ayurvedha & herbs</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
-            </div>
-            <div class="Goal" id="goal">
-                <div>Goal</div>
-                <div id="goal-list">
-                    <div><img src="https://img8.hkrtcdn.com/13667/bnr_1366617_o.png" alt="">
-                        <p>Immunity and well being</p>
-                    </div>
-                    <div><img src="https://img4.hkrtcdn.com/13667/smn_image_1366633_o.png" alt="">
-                        <p>Lean muscle mass</p>
-                    </div>
-                    <div><img src="https://img2.hkrtcdn.com/13667/smn_image_1366641_o.png" alt="">
-                        <p>Weight loss</p>
-                    </div>
-                    <div><img src="https://img8.hkrtcdn.com/13667/smn_image_1366637_o.png" alt="">
-                        <p>Stress and relaxation</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/13670/smn_image_1366929_o.png" alt="">
-                        <p>Bulk gain</p>
-                    </div>
+                <div id="health">
+                  <p>Health food and drinks</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
-            </div>
-            <div class="Offers" id="offers">
-                <div><i class="fas fa-tshirt" style="color: red;"></i>Offers</div>
-                <div id="offers-list">
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-flash-sale-icon.svg"
-                            alt="">
-                        <p>Flash sale</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-super-saving-icon.svg"
-                            alt="">
-                        <p>Super Savings sale</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-999-store-icon.svg"
-                            alt="">
-                        <p>999 store</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-999-store-icon.svg"
-                            alt="">
-                        <p>599 store</p>
-                    </div>
+                <div id="fitness">
+                  <p>Fitness</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
-            </div>
-            <div class="BestSellers" id="bestsellers">
-                <div>BestSellers</div>
-                <div id="bestsellers-list">
-                    <div class="bestsellers-1">
-                        <div onmouseover="bestsellerschange1()">Sports Nutrition<i class="fas fa-greater-than"
-                                id="best-sellers-button1" style="margin-left: 5px;"></i></div>
-                        <div onmouseover="bestsellerschange2()">Health Nutrition<i class="fas fa-greater-than"
-                                id="best-sellers-button2" style="margin-left: 5px;"></i></div>
-                    </div>
-                    <div id="bestsellers-2">
-                    </div>
+                <div id="wellness">
+                  <p>Wellness</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
-            </div>
-            <div class="Consult" id="consult">
-                <div>Consult</div>
-                <div id="consult-list">
-                    <div><img
-                            src="https://img10.hkrtcdn.com/react/static/media/common/misc/consult-health-profile-icon.svg"
-                            alt="">
-                        <p>Health Profile</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/track-diet-plan-icon.svg"
-                            alt="">
-                        <p>Track diet plan</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/what-we-offer-icon.svg"
-                            alt="">
-                        <p>What do we offer</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/book-consultation-icon.svg"
-                            alt="">
-                        <p>Book a consultation</p>
-                    </div>
-                    <div><img src="https://img10.hkrtcdn.com/react/static/media/common/misc/workout-from-home-icon.svg"
-                            alt="">
-                        <p>Workout at Home</p>
-                    </div>
+                <div id="service">
+                  <p>Service Program</p>
+                  <i class="fas fa-greater-than" style="margin-right: 7px"></i>
                 </div>
+              </div>
+              <div id="category-list-child2">
+                <div></div>
+              </div>
             </div>
-
-            <div class="GiftCard">GiftCard</div>
-            <div class="Blog">Blog Videos & More</div>
+          </div>
+          <div class="Brand" id="brand">
+            <div>Brand</div>
+            <div id="brand-list">
+              <div id="brand-list-child1">
+                <p style="background-color: white">All brands</p>
+                <i class="fas fa-greater-than" style="margin-left: 11px"></i>
+              </div>
+              <div id="brand-list-child2">
+                <div>
+                  <p>Sports Nutrition</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum Nutrition</p>
+                </div>
+                <div>
+                  <p>Vitamins and supplements</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum Nutrition</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                </div>
+                <div>
+                  <p>Healthh food & Drinks</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum Nutri</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                </div>
+                <div>
+                  <p>Fitness</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum Nn</p>
+                  <p>muscle</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum N</p>
+                  <p>muscle</p>
+                </div>
+                <div>
+                  <p>Wellness</p>
+                  <p>muscle Blaze</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimumition</p>
+                  <p>muscle B</p>
+                  <p>JustGreen</p>
+                  <p>Bgreen</p>
+                  <p>Optimum tion</p>
+                  <p>muscle Bl</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Gender" id="gender">
+            <div>Gender</div>
+            <div id="gender-list">
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-men-icon.svg" alt="" />
+                <p>Men</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-women-icon.svg" alt="" />
+                <p>Women</p>
+              </div>
+            </div>
+          </div>
+          <div class="Goal" id="goal">
+            <div>Goal</div>
+            <div id="goal-list">
+              <div>
+                <img src="https://img8.hkrtcdn.com/13667/bnr_1366617_o.png" alt="" />
+                <p>Immunity and well being</p>
+              </div>
+              <div>
+                <img src="https://img4.hkrtcdn.com/13667/smn_image_1366633_o.png" alt="" />
+                <p>Lean muscle mass</p>
+              </div>
+              <div>
+                <img src="https://img2.hkrtcdn.com/13667/smn_image_1366641_o.png" alt="" />
+                <p>Weight loss</p>
+              </div>
+              <div>
+                <img src="https://img8.hkrtcdn.com/13667/smn_image_1366637_o.png" alt="" />
+                <p>Stress and relaxation</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/13670/smn_image_1366929_o.png" alt="" />
+                <p>Bulk gain</p>
+              </div>
+            </div>
+          </div>
+          <div class="Offers" id="offers">
+            <div><i class="fas fa-tshirt" style="color: red"></i>Offers</div>
+            <div id="offers-list">
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-flash-sale-icon.svg" alt="" />
+                <p>Flash sale</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-super-saving-icon.svg" alt="" />
+                <p>Super Savings sale</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-999-store-icon.svg" alt="" />
+                <p>999 store</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/menu-999-store-icon.svg" alt="" />
+                <p>599 store</p>
+              </div>
+            </div>
+          </div>
+          <div class="BestSellers" id="bestsellers">
+            <div>BestSellers</div>
+            <div id="bestsellers-list">
+              <div class="bestsellers-1">
+                <div onmouseover="bestsellerschange1()">
+                  Sports Nutrition<i class="fas fa-greater-than" id="best-sellers-button1" style="margin-left: 5px"></i>
+                </div>
+                <div onmouseover="bestsellerschange2()">
+                  Health Nutrition<i class="fas fa-greater-than" id="best-sellers-button2" style="margin-left: 5px"></i>
+                </div>
+              </div>
+              <div id="bestsellers-2"></div>
+            </div>
+          </div>
+          <div class="Consult" id="consult">
+            <div>Consult</div>
+            <div id="consult-list">
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/consult-health-profile-icon.svg"
+                  alt="" />
+                <p>Health Profile</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/track-diet-plan-icon.svg" alt="" />
+                <p>Track diet plan</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/what-we-offer-icon.svg" alt="" />
+                <p>What do we offer</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/book-consultation-icon.svg" alt="" />
+                <p>Book a consultation</p>
+              </div>
+              <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/workout-from-home-icon.svg" alt="" />
+                <p>Workout at Home</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="GiftCard">GiftCard</div>
+          <div class="Blog">Blog Videos & More</div>
         </div>
         <div class="c2box2">
-            <div class="store"><i class="fas fa-store"></i></div>
-            <div class="visit">Vist HK stores</div>
+          <div class="store"><i class="fas fa-store"></i></div>
+          <div class="visit">Vist HK stores</div>
         </div>
-    </div>
+      </div>
 
     <div class="cont3">
         <div class="cont3-box1">
@@ -2253,6 +2368,10 @@
             price: 389,
             dprice: 389 * 2,
             imagelink: "https://img4.hkrtcdn.com/14378/prd_1437793-HealthKart-Multivitamin-with-Multimineral-Amino-Acids-Taurine-Ginseng-Extract-60-tablets-Unflavoured_o.jpg",
+            
+            text: "Healthkart Multivitamin with Multimineral Amino Acids",
+            discprice:300,
+            count:1,
         },
         {
             discount: 40,
@@ -2648,7 +2767,17 @@
         }
         
     ]
+    for(z=0;z<totalproducts.length;z++){
+        let s=totalproducts[z].discount
+        totalproducts[z].discount=`${s}% off`
+        let f=totalproducts[z].imagelink
+        totalproducts[z].image=f
+        totalproducts[z].discprice=totalproducts[z].price-200
+        totalproducts[z].count=1
+        totalproducts[z].text=totalproducts[z].name
 
+    }
+    console.log(totalproducts)
     let displayproducts = document.getElementById("cont3-box2-products")
     console.log(totalproducts.length)
     productsAppend(totalproducts)
@@ -2660,7 +2789,7 @@
             let div = document.createElement("div")
             div.innerHTML = `
                     <div>
-                        <p>${thing.discount}% off</p>
+                        <p>${thing.discount}</p>
                         <img src="https://img10.hkrtcdn.com/react/static/media/common/variant/wishlist/whistlist.svg"
                             alt="">
                     </div>
@@ -2697,6 +2826,18 @@
     }
     function addtocart(data) {
         console.log(data)
+         let myadded;
+    myadded = localStorage.getItem("in_cart");
+    if (myadded == null) {
+      myadded = [];
+    } else {
+      myadded = JSON.parse(localStorage.getItem("in_cart"));
+    }
+    myadded.push(data);
+    var number_cartip=document.getElementById("number_cartip")
+     number_cartip.innerHTML=`${myadded.length}`;
+    localStorage.setItem("in_cart", JSON.stringify(myadded));
+    
     }
     function showoption() {
         let sortproducts = document.getElementById("sortproducts").value
@@ -3659,5 +3800,7 @@
     service.addEventListener("mouseout", function () {
         fas[6].style.color = "black"
     })
-
+var number_cartip= document.getElementById("number_cartip");
+   var kola = JSON.parse(localStorage.getItem("in_cart"));
+   number_cartip.innerHTML=`${kola.length}`;
 </script>

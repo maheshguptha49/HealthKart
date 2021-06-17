@@ -33,7 +33,7 @@
       <div class="left_container">
         <div class="mycart">
           My cart
-          <span id="target_mycart" style="background-color: white">(3)</span>
+          <span id="target_mycart" style="background-color: white">(0)</span>
         </div>
         <div id="container_items_cart" class="container_items_cart">
           <!-- <div class="item_div">
@@ -400,6 +400,8 @@
      }
    kol.splice(z, 1);
    kre(kol);
+   var target_mycart=document.getElementById("target_mycart");
+   target_mycart.innerHTML=`(${kol.length})`
    kol=localStorage.setItem("in_cart", JSON.stringify(kol));
        function dikh(){
         kol = JSON.parse(localStorage.getItem("in_cart"));
@@ -472,5 +474,7 @@
    take.innerHTML=`${sum_dis}`
 }
 kol = JSON.parse(localStorage.getItem("in_cart"));
+var target_mycart= document.getElementById("target_mycart");
+target_mycart.innerHTML=`(${kol.length})`;
 payments(kol);
 </script>

@@ -1148,6 +1148,17 @@
       cursor: pointer;
       margin-right: .2%;
     }
+    #number_cartip{
+      float: left;
+      background-color:orangered;
+      margin-left: 5%;
+      border-radius: 50%;
+      width: 20px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+    }
   </style>
 </head>
 
@@ -1155,7 +1166,7 @@
   <div class="cont1 navbar">
     <div style="
       font-size: 25.3px;
-      color: rgb(0, 191, 191);
+      color: rgb(164, 179, 179);
       font-weight: 500;
       cursor: pointer;
       letter-spacing: 3px;
@@ -1183,9 +1194,9 @@
     <div>Returns & Orders</div>
     <div><button class="login">Login</button></div>
     <div><button class="blue signup">Signup</button></div>
-    <div class="cart" id="c55">
-      <img style="height: 90%" src="https://img10.hkrtcdn.com/react/static/media/common/misc/shopping-cart.svg"
-        alt="" />
+    <div class="cart" id="c55" style="width: 70px;">
+      <img style="height: 90%; float: left;" src="https://img10.hkrtcdn.com/react/static/media/common/misc/shopping-cart.svg"/>
+        <div id="number_cartip">0</div>
       <div id="cart-list">
         <div id="location-to-cart">Proceed to Cart</div>
       </div>
@@ -3535,6 +3546,9 @@ cartit(e);
       myadded = JSON.parse(localStorage.getItem("in_cart"));
     }
     myadded.push(e);
+     var number_cartip= document.getElementById("number_cartip");
+  //  var kola = JSON.parse(localStorage.getItem("in_cart"));
+   number_cartip.innerHTML=`${myadded.length}`;
     localStorage.setItem("in_cart", JSON.stringify(myadded));
     
   }
@@ -4130,6 +4144,8 @@ cartit(e);
   service.addEventListener("mouseout", function () {
     fas[6].style.color = "black";
   });
-
+   var number_cartip= document.getElementById("number_cartip");
+   var kola = JSON.parse(localStorage.getItem("in_cart"));
+   number_cartip.innerHTML=`${kola.length}`;
 
 </script>
