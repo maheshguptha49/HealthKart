@@ -1,327 +1,324 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Payment</title>
     <style>
-        * {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
 
-        .header-container {
-            /* position: fixed; */
-            width: 105%;
-            height: 65px;
-            box-shadow: 0 3px 6px rgb(0 0 0 / 12%);
-            display: flex;
-            align-items: center;
-        }
+      .header-container {
+        /* position: fixed; */
+        width: 105%;
+        height: 65px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 12%);
+        display: flex;
+        align-items: center;
+      }
 
-        .cont1 {
-            display: flex;
-            width: 80%;
-            justify-content: flex-start;
-            align-items: center;
-            margin-left: 10%;
+      .cont1 {
+        display: flex;
+        width: 80%;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 10%;
+      }
 
-        }
+      .cont1 > div:nth-child(2) > div:nth-child(2),
+      .cont1 > div:nth-child(2) > div:nth-child(4) {
+        background-color: black;
+        width: 120px;
+        height: 0.5px;
+        margin-top: 5px;
+      }
 
-        .cont1>div:nth-child(2)>div:nth-child(2),
-        .cont1>div:nth-child(2)>div:nth-child(4) {
-            background-color: black;
-            width: 120px;
-            height: 0.5px;
-            margin-top: 5px;
-        }
+      .cont1 > div:nth-child(2) > div {
+        display: flex;
+        align-items: center;
+      }
 
-        .cont1>div:nth-child(2)>div {
-            display: flex;
-            align-items: center;
-        }
+      .cont1 > div:nth-child(2) {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-around;
+        color: rgb(147, 147, 147);
+        margin-left: 10%;
+        font-size: 80%;
+      }
 
-        .cont1>div:nth-child(2) {
-            padding: 0 10px;
-            display: flex;
-            justify-content: space-around;
-            color: rgb(147, 147, 147);
-            margin-left: 10%;
-            font-size: 80%;
-        }
+      .cont1 > div:nth-child(2) > div:nth-child(2n-1) {
+        padding: 0 10px;
+      }
 
-        .cont1>div:nth-child(2)>div:nth-child(2n-1) {
-            padding: 0 10px;
-        }
+      .logo {
+        font-size: 25.3px;
+        color: rgb(0, 191, 191);
+        font-weight: 500;
+        cursor: pointer;
+        letter-spacing: 3px;
+        height: 49px;
+        display: flex;
+        align-items: center;
+      }
 
-        .logo {
-            font-size: 25.3px;
-            color: rgb(0, 191, 191);
-            font-weight: 500;
-            cursor: pointer;
-            letter-spacing: 3px;
-            height: 49px;
-            display: flex;
-            align-items: center;
-        }
+      .logo > span {
+        color: white;
+        background-color: rgb(0, 191, 191);
+        height: 49px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 3px;
+      }
 
-        .logo>span {
-            color: white;
-            background-color: rgb(0, 191, 191);
-            height: 49px;
-            display: flex;
-            align-items: center;
-            letter-spacing: 3px;
-        }
+      #squarebox {
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border: 2px solid #9e9e9e;
+        border-radius: 2px;
+        cursor: pointer;
+      }
 
-        #squarebox {
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            border: 2px solid #9e9e9e;
-            border-radius: 2px;
-            cursor: pointer;
-        }
+      .cod > div:nth-child(1) > span:nth-child(1) {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        border: 2px solid #00c0bf;
+        cursor: pointer;
+      }
 
-        .cod>div:nth-child(1)>span:nth-child(1) {
+      .cod > div:nth-child(1) > span:nth-child(1) > span {
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        margin-left: 3.8px;
+        margin-top: 3.8px;
+        background-color: #00c0bf;
+        border-radius: 100%;
+        border: 2px solid #00c0bf;
+        cursor: pointer;
+      }
 
-            display: inline-block;
-            height: 24px;
-            width: 24px;
-            border-radius: 100%;
-            border: 2px solid #00c0bf;
-            cursor: pointer;
-        }
+      .cont2 {
+        background-color: rgb(248, 248, 248);
+        height: 100%;
+        margin: 3px -20px;
+      }
 
-        .cod>div:nth-child(1)>span:nth-child(1)>span {
-            display: inline-block;
-            height: 12px;
-            width: 12px;
-            margin-left: 3.8px;
-            margin-top: 3.8px;
-            background-color: #00c0bf;
-            border-radius: 100%;
-            border: 2px solid #00c0bf;
-            cursor: pointer;
-        }
+      .cont2box1 {
+        width: 80%;
+        margin: auto;
+        padding-top: 36px;
+      }
 
-        .cont2 {
-            background-color: rgb(248, 248, 248);
-            height: 100%;
-            margin: 3px -20px;
-        }
+      .c2b1b1 > div:nth-child(2) {
+        display: flex;
+      }
 
-        .cont2box1 {
-            width: 80%;
-            margin: auto;
-            padding-top: 36px;
-        }
+      .c2b1b1 {
+        border: 1px solid rgb(211, 212, 213);
+        background-color: white;
+      }
 
-        .c2b1b1>div:nth-child(2) {
-            display: flex;
-        }
+      .c2b1b1 > div:nth-child(1) {
+        padding: 25px 3%;
+        font-size: 140%;
+        font-weight: 540;
+        border-bottom: 1px solid rgb(211, 212, 213);
+        font-weight: 550;
+      }
 
-        .c2b1b1 {
-            border: 1px solid rgb(211, 212, 213);
-            background-color: white;
-        }
+      .c2b1b1 > div:nth-child(2) > div:nth-child(1) > div {
+        border-top: 1px solid rgb(211, 212, 213);
+        border-right: 1px solid rgb(211, 212, 213);
+        padding: 25px 20px;
+        font-size: 110%;
+        font-weight: 550;
+      }
 
-        .c2b1b1>div:nth-child(1) {
-            padding: 25px 3%;
-            font-size: 140%;
-            font-weight: 540;
-            border-bottom: 1px solid rgb(211, 212, 213);
-            font-weight: 550;
-        }
+      .c2b1b1 > div:nth-child(2) > div:nth-child(1) > div:nth-child(7),
+      .c2b1b1 > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) {
+        padding: 10px 25px;
+      }
 
-        .c2b1b1>div:nth-child(2)>div:nth-child(1)>div {
-            border-top: 1px solid rgb(211, 212, 213);
-            border-right: 1px solid rgb(211, 212, 213);
-            padding: 25px 20px;
-            font-size: 110%;
-            font-weight: 550;
-        }
+      .offers {
+        color: rgb(0, 168, 52);
+      }
 
-        .c2b1b1>div:nth-child(2)>div:nth-child(1)>div:nth-child(7),
-        .c2b1b1>div:nth-child(2)>div:nth-child(1)>div:nth-child(8) {
-            padding: 10px 25px;
-        }
+      .cod li {
+        color: rgb(87, 88, 89);
+        padding: 10px 0;
+      }
 
-       
+      .cod li:nth-child(-n + 2) {
+        font-size: 80%;
+        padding: 5px 0;
+      }
 
-        .offers {
-            color: rgb(0, 168, 52);
-        }
+      .cod li p {
+        margin: 2px 0;
+      }
 
-        .cod li {
-            color: rgb(87, 88, 89);
-            padding: 10px 0;
-        }
+      .cod > div:nth-child(1) span:nth-child(1) {
+        margin-left: 5px;
+        margin-top: 8px;
+      }
 
-        .cod li:nth-child(-n+2) {
-            font-size: 80%;
-            padding: 5px 0;
-        }
+      .cont2box1 {
+        display: flex;
+      }
 
-        .cod li p {
-            margin: 2px 0;
-        }
+      .c2b1b2 {
+        width: 370px;
+        margin: 0 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
 
-        .cod>div:nth-child(1) span:nth-child(1) {
-            margin-left: 5px;
-            margin-top: 8px;
-        }
+      .delivery-address-section {
+        width: 91%;
+        border-radius: 4px;
+        box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+        border: none;
+        padding: 20px 30px 20px 20px;
+        background-color: #fff;
+        margin-bottom: 13px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
 
-        .cont2box1 {
-            display: flex;
-        }
+      .delivery-address-section > p:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        position: relative;
+      }
 
-        .c2b1b2 {
-            width: 370px;
-            margin: 0 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+      .delivery-location-img {
+        position: absolute;
+        top: 3px;
+      }
 
-        .delivery-address-section {
-            width: 91%;
-            border-radius: 4px;
-            box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
-            border: none;
-            padding: 20px 30px 20px 20px;
-            background-color: #fff;
-            margin-bottom: 13px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+      .order-summary-section {
+        border-radius: 4px;
+        box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+        border: none;
+        width: 91%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        padding: 20px 30px 20px 20px;
+        background-color: #fff;
+        margin-bottom: 13px;
+      }
 
-        .delivery-address-section>p:nth-child(1) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-            position: relative;
-        }
+      .order-summary-section > div:nth-child(1) {
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px dashed #d3d4d5;
+        border-bottom-style: solid;
+      }
 
-        .delivery-location-img{
-            position: absolute;
-            top: 3px;
-        }
+      .order-summary-section > div:nth-child(1) > p {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 0;
+        margin-bottom: 22px;
+        color: #212121;
+        outline: none;
+        box-sizing: border-box;
+        font-weight: 550;
+      }
 
-        .order-summary-section {
-            border-radius: 4px;
-            box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
-            border: none;
-            width: 91%;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            padding: 20px 30px 20px 20px;
-            background-color: #fff;
-            margin-bottom: 13px;
-        }
+      .order-summary-content {
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px dashed #d3d4d5;
+        font-size: 14px;
+      }
 
-        .order-summary-section>div:nth-child(1) {
-            display: inline-block;
-            width: 100%;
-            border-bottom: 1px dashed #d3d4d5;
-            border-bottom-style: solid;
-        }
+      .order-summary-content > p {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        .order-summary-section>div:nth-child(1)>p {
-            font-size: 16px;
-            line-height: 19px;
-            margin-top: 0;
-            margin-bottom: 22px;
-            color: #212121;
-            outline: none;
-            box-sizing: border-box;
-            font-weight: 550;
+      .order-summary-content > p > span + span {
+        font-weight: 550;
+        color: #212121;
+      }
 
-        }
+      .order-summary-content > p > span {
+        color: #666;
+      }
 
-        .order-summary-content {
-            display: inline-block;
-            width: 100%;
-            border-bottom: 1px dashed #d3d4d5;
-            font-size: 14px;
-        }
+      .order-summary-section > div:nth-child(7) {
+        border-bottom-style: solid;
+      }
 
-        .order-summary-content>p {
-            display: flex;
-            justify-content: space-between;
-        }
+      .icon-section {
+        margin: 22px 0;
+      }
 
-        .order-summary-content>p>span+span {
-            font-weight: 550;
-            color: #212121;
-        }
+      .icon-section > div:nth-child(1) {
+        text-align: center;
+        font-size: 13px;
+        color: #666;
+        line-height: 15px;
+        margin-bottom: 12px;
+      }
 
-        .order-summary-content>p>span {
-            color: #666;
-        }
+      .payment-icons {
+        width: 350px;
+        height: 30px;
+      }
 
-        .order-summary-section>div:nth-child(7) {
-            border-bottom-style: solid;
-        }
+      #pay-button > div,
+      .paylater {
+        color: white;
+        text-align: center;
+        background-color: rgb(223, 70, 34);
+        padding: 20px 0;
+        width: 75%;
+        margin: auto;
+        border-radius: 3px;
+        cursor: pointer;
+      }
 
+      #squarebox:checked {
+        border: 1px solid green;
+      }
 
-        .icon-section {
-            margin: 22px 0;
-        }
+      .input-radio {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        border-radius: 100%;
+        border: 2px solid #747474;
 
-        .icon-section>div:nth-child(1) {
-            text-align: center;
-            font-size: 13px;
-            color: #666;
-            line-height: 15px;
-            margin-bottom: 12px;
-        }
+        /* transform: translateY(-50%); */
+        cursor: pointer;
+      }
 
-        .payment-icons {
-            width: 350px;
-            height: 30px;
-        }
+      .input-radio:checked {
+        border: 2px solid #00c0bf;
+      }
 
-        #pay-button>div,
-        .paylater {
-            color: white;
-            text-align: center;
-            background-color: rgb(223, 70, 34);
-            padding: 20px 0;
-            width: 75%;
-            margin: auto;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+      #puus > label {
+        --size: 25px;
+        min-width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
 
-        #squarebox:checked {
-            border: 1px solid green;
-        }
-
-        .input-radio {
-            width: 24px;
-            height: 24px;
-            min-width: 24px;
-            border-radius: 100%;
-            border: 2px solid #747474;
-
-            /* transform: translateY(-50%); */
-            cursor: pointer;
-        }
-
-        .input-radio:checked {
-            border: 2px solid #00c0bf;
-        }
-
-        #puus>label {
-            --size: 25px;
-            min-width: var(--size);
-            height: var(--size);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        /* .checkmark{
+      /* .checkmark{
                --gap: 3px;
                --border: 2px;
                --check-color: #ff5722;
@@ -330,568 +327,679 @@
                border-radius: 50%;
                display: inline-block;
                 } */
-        .cod li:nth-child(2)~li {
-            font-size: 80%;
+      .cod li:nth-child(2) ~ li {
+        font-size: 80%;
+      }
+
+      #dcs,
+      #puus {
+        padding-left: 8%;
+      }
+
+      .cod {
+        padding-left: 6%;
+      }
+
+      #dcs > div,
+      #puus > div {
+        padding: 10px 0;
+        width: 70%;
+        font-weight: 500;
+      }
+
+      #dcs input {
+        box-sizing: content-box;
+      }
+
+      #dcs input:nth-child(3) {
+        width: 55px;
+      }
+
+      #dcs input,
+      #dcs select {
+        height: 30px;
+      }
+
+      #dcs select {
+        padding-left: 20px;
+      }
+
+      #dcs input::placeholder {
+        padding-left: 10px;
+      }
+
+      #dcs input:nth-child(-n + 2) {
+        display: block;
+        margin-top: 10px;
+      }
+
+      #dcs > div:nth-child(4) {
+        display: flex;
+        align-items: center;
+      }
+
+      input[type="checkbox"] {
+        width: 15px;
+      }
+
+      #dcs > div:nth-child(4) > span {
+        margin-top: 5px;
+      }
+
+      #dcs > div:nth-child(5) {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      #dcs > div:nth-child(5) img {
+        height: 26px;
+        margin-right: 4px;
+      }
+
+      #dcs > div:nth-child(6) > div {
+        width: 90% !important;
+        margin: 0 !important;
+      }
+
+      .c2b1b1 > div:nth-child(2) > div:nth-child(2) {
+        width: 800px;
+      }
+
+      #puus > div > div {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      #puus img {
+        vertical-align: middle;
+        margin: 0 22px;
+        max-width: 75px;
+        height: 22px;
+        margin-top: 20px;
+      }
+
+      #puus > div > div {
+        font-size: large;
+        font-weight: 550;
+      }
+
+      #puus > div > div {
+        margin: 10px 0;
+      }
+
+      #puus > div {
+        max-height: 50px;
+        overflow: hidden;
+        margin: 25px 0;
+      }
+
+      #puus input {
+        margin-top: 15px;
+        height: 2rem;
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: 800px) {
+        * {
+          font-size: 95%;
         }
 
-        #dcs,
-        #puus {
-            padding-left: 8%;
-
+        .cont1 > div:nth-child(2n) {
+          width: 100px;
         }
 
-        .cod {
-            padding-left: 6%;
+        #squarebox {
+          width: 10px;
+          position: relative;
+          top: 7px;
         }
 
-        #dcs>div,
-        #puus>div {
-            padding: 10px 0;
-            width: 70%;
-            font-weight: 500;
+        .c2b1b1 > div:nth-child(2) > div:nth-child(2) {
+          width: 400px;
         }
+      }
 
-        #dcs input {
-            box-sizing: content-box;
-        }
+      .cashon {
+        font-size: 14px;
+        color: #212121;
+        outline: none;
+        box-sizing: border-box;
+        font-weight: 500;
+        margin-bottom: 18px;
+        padding-left: 20px;
+      }
 
-        #dcs input:nth-child(3) {
-            width: 55px;
-        }
+      #payment-divs {
+        width: 43%;
+      }
 
-        #dcs input,
-        #dcs select {
-            height: 30px;
-        }
+      #payment-divs > div {
+        cursor: pointer;
+      }
 
-        #dcs select {
-            padding-left: 20px;
-        }
+      .middle-div {
+        width: 700px !important;
+      }
 
-        #dcs input::placeholder {
-            padding-left: 10px;
-        }
+      .checkout-flex {
+        display: flex;
+      }
 
-        #dcs input:nth-child(-n+2) {
-            display: block;
-            margin-top: 10px;
-        }
+      .offers {
+        font-size: 70%;
+        margin-top: -10px;
+      }
 
-        #dcs>div:nth-child(4) {
-            display: flex;
-            align-items: center;
-        }
+      #pin-state {
+        color: #212121;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-left: 30px;
+      }
 
-        input[type="checkbox"] {
-            width: 15px;
-        }
+      #user-name {
+        line-height: 16px;
+        margin: 18px 0 0;
+        font-weight: 600;
+      }
 
-        #dcs>div:nth-child(4)>span {
-            margin-top: 5px;
-        }
-
-        #dcs>div:nth-child(5) {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        #dcs>div:nth-child(5) img {
-            height: 26px;
-            margin-right: 4px;
-        }
-
-        #dcs>div:nth-child(6)>div {
-            width: 90% !important;
-            margin: 0 !important;
-        }
-
-        .c2b1b1>div:nth-child(2)>div:nth-child(2) {
-            width: 800px;
-        }
-
-        #puus>div>div {
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        #puus img {
-            vertical-align: middle;
-            margin: 0 22px;
-            max-width: 75px;
-            height: 22px;
-            margin-top: 20px;
-        }
-
-        #puus>div>div {
-            font-size: large;
-            font-weight: 550;
-        }
-
-        #puus>div>div {
-            margin: 10px 0;
-        }
-
-        #puus>div {
-            max-height: 50px;
-            overflow: hidden;
-            margin: 25px 0;
-        }
-
-        #puus input {
-            margin-top: 15px;
-            height: 2rem;
-            cursor: pointer;
-
-        }
-
-        @media only screen and (max-width: 800px) {
-            * {
-                font-size: 95%;
-            }
-
-            .cont1>div:nth-child(2n) {
-                width: 100px;
-            }
-
-            #squarebox {
-                width: 10px;
-                position: relative;
-                top: 7px;
-            }
-
-            .c2b1b1>div:nth-child(2)>div:nth-child(2) {
-                width: 400px;
-            }
-        }
-
-        .cashon {
-            font-size: 14px;
-            color: #212121;
-            outline: none;
-            box-sizing: border-box;
-            font-weight: 500;
-            margin-bottom: 18px;
-            padding-left: 20px;
-        }
-
-        #payment-divs {
-            width: 43%;
-        }
-
-        #payment-divs>div {
-            cursor: pointer;
-        }
-
-        .middle-div {
-            width: 700px !important;
-        }
-
-        .checkout-flex {
-            display: flex;
-        }
-
-        .offers {
-            font-size: 70%;
-            margin-top: -10px;
-        }
-
-        #pin-state {
-            color: #212121;
-            outline: none;
-            box-sizing: border-box;
-            font-size: 14px;
-            margin-left: 30px;
-        }
-
-        #user-name{
-            line-height: 16px;
-            margin: 18px 0 0;
-            font-weight: 600;
-        }
-
-        #address-number{
-            font-size: 14px;
-    margin-top: 7px;
-    color: #1d252d;
-    opacity: .8;
-    line-height: 23px;
-    margin-bottom: 0;
-        }
+      #address-number {
+        font-size: 14px;
+        margin-top: 7px;
+        color: #1d252d;
+        opacity: 0.8;
+        line-height: 23px;
+        margin-bottom: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="header-container">
-        <div class="cont1">
-            <div>
-                <div class="logo">HEALT<span>HK</span>ART</div>
-            </div>
-            <div>
-                <div>
-                    <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="" />CART
-                </div>
-                <div></div>
-                <div>
-                    <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-blue.svg" alt="" />ADDRESS
-                </div>
-                <div></div>
-                <div>
-                    <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="" />PAYMENT
-                </div>
-            </div>
+      <div class="cont1">
+        <div>
+          <div class="logo">HEALT<span>HK</span>ART</div>
         </div>
+        <div>
+          <div>
+            <img
+              src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg"
+              alt=""
+            />CART
+          </div>
+          <div></div>
+          <div>
+            <img
+              src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-blue.svg"
+              alt=""
+            />ADDRESS
+          </div>
+          <div></div>
+          <div>
+            <img
+              src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg"
+              alt=""
+            />PAYMENT
+          </div>
+        </div>
+      </div>
     </div>
     <div class="cont2">
-        <div class="cont2box1">
-            <div class="c2b1b1">
-                <div> Choose Payment Options</div>
+      <div class="cont2box1">
+        <div class="c2b1b1">
+          <div>Choose Payment Options</div>
+          <div>
+            <div id="payment-divs">
+              <div id="puu">Pay Using UPI</div>
+              <div id="cod">Cash On Delivery</div>
+              <div id="dc">Debit Card</div>
+              <div id="cc">Credit Card</div>
+              <div id="pp">PhonePe</div>
+              <div id="pw">Paytm Wallet</div>
+              <div id="ap">
+                <p>Amazon Pay</p>
+                <p class="offers">Offers Available</p>
+              </div>
+              <div id="mw">
+                <p>Mobikwik Wallet</p>
+                <p class="offers">Offers Available</p>
+              </div>
+              <div id="ow">Other Wallets</div>
+              <div id="ib">Internet Banking</div>
+              <div id="ep">EMI or Pay Later</div>
+            </div>
+            <div class="middle-div">
+              <div class="cod" id="cods">
                 <div>
-                    <div id="payment-divs">
-                        <div id="puu">Pay Using UPI</div>
-                        <div id="cod">Cash On Delivery</div>
-                        <div id="dc">Debit Card</div>
-                        <div id="cc">Credit Card</div>
-                        <div id="pp">PhonePe</div>
-                        <div id="pw">Paytm Wallet</div>
-                        <div id="ap">
-                            <p>Amazon Pay</p>
-                            <p class="offers">Offers Available</p>
-                        </div>
-                        <div id="mw">
-                            <p>Mobikwik Wallet</p>
-                            <p class="offers">Offers Available</p>
-                        </div>
-                        <div id="ow">Other Wallets</div>
-                        <div id="ib">Internet Banking</div>
-                        <div id="ep">EMI or Pay Later</div>
-                    </div>
-                    <div class="middle-div">
-                        <div class="cod" id="cods">
-                            <div><span><span></span></span> <span class="cashon">CASH ON DELIVERY</span></div>
-                            <div>
-                                <ul>
-                                    <li>You will not earn any HK Cash through COD</li>
-                                    <li>For order below ₹500, we charge ₹30 for COD</li>
-                                    <li type="none">
-                                        <div class="checkout-flex"> <input type="checkbox" id="squarebox"><span>Check
-                                                the box here to confirm &amp; complete your purchase through Cash On
-                                                Delivery
-                                                option.</span></div>
-                                    </li>
-                                    <li type="none">
-                                        <p>Avoid out of cash & change problems. Use Credit/Debit card, Internet banking,
-                                        </p>
-                                        <p>Wallets or UPI for convenient experience.</p>
-                                        <p>HK Cash is not valid on Cash on Delivery orders. Use Prepaid Payment Mode</p>
-                                        <p>to Earn & Redeem HK Cash</p>
-                                    </li>
-                                    <li type="none" id="pay-button">
-                                        <div>Pay Later <span>-₹529</span></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="dcs">
-                            <div>Enter Card Details</div>
-                            <div>
-                                <input type="text" placeholder="Card holder name">
-                                <input type="text" placeholder="Card Number">
-                            </div>
-                            <div>
-                                <select name="" id="monthoptions">
-                                    <option value="Expiry MM">Expiry MM</option>
-                                </select>
-                                <select name="" id="yearoptions">
-                                    <option value="Expiry YY">Expiry YY</option>
-                                </select>
-                                <input type="number" placeholder="CVV">
-                            </div>
-                            <div>
-                                <input type="checkbox">
-                                <span>Securely saved for faster payments </span>
-                            </div>
-                            <div class="card-imgs">
-                                <img src="https://img1.hkrtcdn.com/1718/RuPay-Icon.png" class="" alt="Rupay"><img
-                                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/13831/normal_1383075_o.png"
-                                    class="" alt="Visa"><img
-                                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/13831/normal_1383073_o.png"
-                                    class="" alt="MasterCard"><img
-                                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/payment_img/card/ic_maestro.png"
-                                    class="" alt="Maestro"><img
-                                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/payment_img/card/Maestro_logo.png"
-                                    class="" alt="SBI Maestro Card">
-                            </div>
-                            <div>
-                                <div class="paylater">
-                                    <div>Pay<span>-₹529</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="puus">
-                            <div>
-                                <div>
-                                    <input type="radio" name="upi" id="phonepe">
-                                    <img class="upi-image"
-                                        src="https://s3-ap-southeast-1.amazonaws.com/hkprod/12028/normal_1202725_o.jpg"
-                                        alt="PhonePe">
-                                    <p>PhonePe</p>
-                                </div>
-                                <div>
-                                    <div class="paylater">Pay Securely <span>₹529</span></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <input type="radio" name="upi" id="normalupi">
-                                    <img class="upi-image" src="https://img1.hkrtcdn.com/1179/paytm-upi.png"
-                                        alt="PhonePe">
-                                    <p>UPI</p>
-                                </div>
-                                <div>
-                                    <div class="paylater">Pay Securely <span>₹529</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <span><span></span></span>
+                  <span class="cashon">CASH ON DELIVERY</span>
                 </div>
-
+                <div>
+                  <ul>
+                    <li>You will not earn any HK Cash through COD</li>
+                    <li>For order below ₹500, we charge ₹30 for COD</li>
+                    <li type="none">
+                      <div class="checkout-flex">
+                        <input type="checkbox" id="squarebox" /><span
+                          >Check the box here to confirm &amp; complete your
+                          purchase through Cash On Delivery option.</span
+                        >
+                      </div>
+                    </li>
+                    <li type="none">
+                      <p>
+                        Avoid out of cash & change problems. Use Credit/Debit
+                        card, Internet banking,
+                      </p>
+                      <p>Wallets or UPI for convenient experience.</p>
+                      <p>
+                        HK Cash is not valid on Cash on Delivery orders. Use
+                        Prepaid Payment Mode
+                      </p>
+                      <p>to Earn & Redeem HK Cash</p>
+                    </li>
+                    <li type="none" id="pay-button">
+                      <div>Pay Later <span id="cod_tot1">-₹529</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="dcs">
+                <div>Enter Card Details</div>
+                <div>
+                  <input type="text" placeholder="Card holder name" />
+                  <input type="text" placeholder="Card Number" />
+                </div>
+                <div>
+                  <select name="" id="monthoptions">
+                    <option value="Expiry MM">Expiry MM</option>
+                  </select>
+                  <select name="" id="yearoptions">
+                    <option value="Expiry YY">Expiry YY</option>
+                  </select>
+                  <input type="number" placeholder="CVV" />
+                </div>
+                <div>
+                  <input type="checkbox" />
+                  <span>Securely saved for faster payments </span>
+                </div>
+                <div class="card-imgs">
+                  <img
+                    src="https://img1.hkrtcdn.com/1718/RuPay-Icon.png"
+                    class=""
+                    alt="Rupay"
+                  /><img
+                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/13831/normal_1383075_o.png"
+                    class=""
+                    alt="Visa"
+                  /><img
+                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/13831/normal_1383073_o.png"
+                    class=""
+                    alt="MasterCard"
+                  /><img
+                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/payment_img/card/ic_maestro.png"
+                    class=""
+                    alt="Maestro"
+                  /><img
+                    src="https://s3-ap-southeast-1.amazonaws.com/hkprod/payment_img/card/Maestro_logo.png"
+                    class=""
+                    alt="SBI Maestro Card"
+                  />
+                </div>
+                <div>
+                  <div class="paylater">
+                    <div>Pay<span id="cod_tot">-₹529</span></div>
+                  </div>
+                </div>
+              </div>
+              <div id="puus">
+                <div>
+                  <div>
+                    <input type="radio" name="upi" id="phonepe" />
+                    <img
+                      class="upi-image"
+                      src="https://s3-ap-southeast-1.amazonaws.com/hkprod/12028/normal_1202725_o.jpg"
+                      alt="PhonePe"
+                    />
+                    <p>PhonePe</p>
+                  </div>
+                  <div>
+                    <div class="paylater">Pay Securely <span>₹529</span></div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <input type="radio" name="upi" id="normalupi" />
+                    <img
+                      class="upi-image"
+                      src="https://img1.hkrtcdn.com/1179/paytm-upi.png"
+                      alt="PhonePe"
+                    />
+                    <p>UPI</p>
+                  </div>
+                  <div>
+                    <div class="paylater">Pay Securely <span>₹529</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="c2b1b2">
-                <div class="delivery-address-section">
-                    <p><span><span><img class="delivery-location-img" src="https://img8.hkrtcdn.com/react/static/media/payment/location-outline.svg"
-                                    alt=""> </span> <span id="pin-state">
-                                Delivery at 50001,New Jersey</span></span> <span style="color: #1ebcbd;"
-                            onclick="changeAdress()">Change</span>
-                    </p>
-                    <p id="user-name">Tony Soprano</p>
-                    <p id="address-number">251 Broadway Street
-                        Penns Avenue, New Jersey(NJ),Phone:987654321</p>
-                </div>
-                <div class="order-summary-section">
-                    <div>
-                        <p>Order Summary</p>
-                    </div>
-                    <div class="order-summary-content">
-                        <p><span>Total</span> <span>₹1000</span></p>
-                    </div>
-                    <div class="order-summary-content">
-                        <p><span>HealthKart Price</span> <span>₹499</span></p>
-                    </div>
-                    <div class="order-summary-content">
-                        <p><span><img src="https://img2.hkrtcdn.com/react/static/media/common/premium-outline.svg"
-                                    alt="">Discount</span> <span>-₹501</span></p>
-                    </div>
-                    <div class="order-summary-content">
-                        <p><span>COD</span> <span>₹30</span></p>
-                    </div>
-                    <div class="order-summary-content">
-                        <p><span>Shipping</span> <span>FREE</span></p>
-                    </div>
-                    <div class="order-summary-content">
-                        <p><span>Total Payable</span> <span>₹529</span></p>
-                    </div>
-
-                </div>
-                <div class="icon-section">
-                    <div><img src="https://img8.hkrtcdn.com/react/static/media/payment/hk_cash_coin.svg" class="hkcash"
-                            width="15px"> 100% Safe & Secure Payments</div>
-                    <div class="payment-icons">
-                        <img data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg" alt="visacard"
-                            itemprop="" imagewidth="50"
-                            imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
-                            imagealt="visacard"><img
-                            data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
-                            alt="mastercard" itemprop="" imagewidth="50"
-                            imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
-                            imagealt="mastercard"><img
-                            data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
-                            alt="americanexpress" itemprop="" imagewidth="50"
-                            imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
-                            imagealt="americanexpress"><img
-                            data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
-                            alt="wallet" itemprop="" imagewidth="50"
-                            imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
-                            imagealt="wallet"><img
-                            data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
-                            alt="netbankingNew" itemprop="" imagewidth="50"
-                            imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
-                            imagealt="netbankingNew"><img
-                            data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg" alt="emi"
-                            itemprop="" imagewidth="50"
-                            imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
-                            imagealt="emi"><img
-                            data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
-                            class="offscreenimage lazy" width="50" height="25"
-                            src="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
-                            alt="cashondeliveryNew" itemprop="" imagewidth="50"
-                            imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
-                            imagealt="cashondeliveryNew">
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="c2b1b2">
+          <div class="delivery-address-section">
+            <p>
+              <span
+                ><span
+                  ><img
+                    class="delivery-location-img"
+                    src="https://img8.hkrtcdn.com/react/static/media/payment/location-outline.svg"
+                    alt=""
+                  />
+                </span>
+                <span id="pin-state"> Delivery at 50001,New Jersey</span></span
+              >
+              <span style="color: #1ebcbd" onclick="changeAdress()"
+                >Change</span
+              >
+            </p>
+            <p id="user-name">Tony Soprano</p>
+            <p id="address-number">
+              251 Broadway Street Penns Avenue, New Jersey(NJ),Phone:987654321
+            </p>
+          </div>
+          <div class="order-summary-section">
+            <div>
+              <p>Order Summary</p>
+            </div>
+            <div class="order-summary-content">
+              <p><span>Total</span> <span id="tot_pay">₹1000</span></p>
+            </div>
+            <div class="order-summary-content">
+              <p>
+                <span>HealthKart Price</span> <span id="hp_price">₹499</span>
+              </p>
+            </div>
+            <div class="order-summary-content">
+              <p>
+                <span
+                  ><img
+                    src="https://img2.hkrtcdn.com/react/static/media/common/premium-outline.svg"
+                    alt=""
+                  />Discount</span
+                >
+                <span id="di_price">-₹501</span>
+              </p>
+            </div>
+            <div class="order-summary-content">
+              <p><span>COD</span> <span>₹30</span></p>
+            </div>
+            <div class="order-summary-content">
+              <p><span>Shipping</span> <span>FREE</span></p>
+            </div>
+            <div class="order-summary-content">
+              <p><span>Total Payable</span> <span id="tp_price">₹529</span></p>
+            </div>
+          </div>
+          <div class="icon-section">
+            <div>
+              <img
+                src="https://img8.hkrtcdn.com/react/static/media/payment/hk_cash_coin.svg"
+                class="hkcash"
+                width="15px"
+              />
+              100% Safe & Secure Payments
+            </div>
+            <div class="payment-icons">
+              <img
+                data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
+                alt="visacard"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/visa-icon.svg"
+                imagealt="visacard"
+              /><img
+                data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
+                alt="mastercard"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/mastercard-icon.svg"
+                imagealt="mastercard"
+              /><img
+                data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
+                alt="americanexpress"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/amex-icon.svg"
+                imagealt="americanexpress"
+              /><img
+                data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
+                alt="wallet"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/wallet-icon.svg"
+                imagealt="wallet"
+              /><img
+                data-original="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
+                alt="netbankingNew"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img10.hkrtcdn.com/react/static/media/common/footer/net-banking-icon.svg"
+                imagealt="netbankingNew"
+              /><img
+                data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
+                alt="emi"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/emi-icon.svg"
+                imagealt="emi"
+              /><img
+                data-original="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
+                class="offscreenimage lazy"
+                width="50"
+                height="25"
+                src="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
+                alt="cashondeliveryNew"
+                itemprop=""
+                imagewidth="50"
+                imageurl="https://img2.hkrtcdn.com/react/static/media/common/footer/cod-icon.svg"
+                imagealt="cashondeliveryNew"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
 <script>
-    let healthkart_delivery_address = JSON.parse(localStorage.getItem("healthkart_address_data"))
-    console.log('healthkart_delivery_address:', healthkart_delivery_address);
-    let current_delivery_address = healthkart_delivery_address[healthkart_delivery_address.length - 1]
+  let tot_pay = document.getElementById("tot_pay");
+  let hp_price = document.getElementById("hp_price");
+  let di_price = document.getElementById("di_price");
+  let tp_price = document.getElementById("tp_price");
 
+  let in_data = JSON.parse(localStorage.getItem("in_cart"));
+  var sum_dis = 0;
+  for (var i = 0; i < in_data.length; i++) {
+    sum_dis = sum_dis + Number(in_data[i].discprice) * in_data[i].count;
+  }
+  var sum_ac = 0;
+  for (var i = 0; i < in_data.length; i++) {
+    sum_ac = sum_ac + Number(in_data[i].price) * in_data[i].count;
+  }
+  hp_price.innerHTML = `${sum_dis}`;
+  tot_pay.innerHTML = `${sum_ac}`;
+  di_price.innerHTML = `-${sum_ac - sum_dis}`;
+  tp_price.innerHTML = `${sum_dis}`;
+  let cod_tot = document.getElementById("cod_tot");
+  cod_tot.innerHTML = `${Number(sum_dis)}`;
 
-   function showDeliveryAddress(){
-    let pin_state = document.getElementById("pin-state")
-    pin_state.innerHTML =
-        `Delivery at <b>${current_delivery_address.healthkart_pincode}, ${current_delivery_address.healthkart_state} </b>`;
-    console.log('pin_state:', pin_state)
+  let cod_tot1 = document.getElementById("cod_tot1");
+  cod_tot1.innerHTML = `${Number(sum_dis) + Number(30)}`;
 
-    let user_name = document.getElementById("user-name")
-    user_name.innerHTML = `${current_delivery_address.healthkart_name}`
+  let healthkart_delivery_address = JSON.parse(
+    localStorage.getItem("healthkart_address_data")
+  );
+  console.log("healthkart_delivery_address:", healthkart_delivery_address);
+  let current_delivery_address =
+    healthkart_delivery_address[healthkart_delivery_address.length - 1];
 
-    let address_number = document.getElementById("address-number")
+  function showDeliveryAddress() {
+    let pin_state = document.getElementById("pin-state");
+    pin_state.innerHTML = `Delivery at <b>${current_delivery_address.healthkart_pincode}, ${current_delivery_address.healthkart_state} </b>`;
+    console.log("pin_state:", pin_state);
+
+    let user_name = document.getElementById("user-name");
+    user_name.innerHTML = `${current_delivery_address.healthkart_name}`;
+
+    let address_number = document.getElementById("address-number");
     address_number.innerHTML = `${current_delivery_address.healthkart_delivery_address}
     ${current_delivery_address.healthkart_city} , ${current_delivery_address.healthkart_state} 
-    Phone : ${current_delivery_address. healthkart_mobile_num}`
-   }
-   showDeliveryAddress()
+    Phone : ${current_delivery_address.healthkart_mobile_num}`;
+  }
+  showDeliveryAddress();
 
-    let phonepe = document.getElementById("phonepe")
-    let normalupi = document.getElementById("normalupi")
-    phonepe.addEventListener("click", function () {
-        if (phonepe.checked == true) {
-            let data = phonepe.parentElement.parentElement
-            data.style.maxHeight = "120px"
-        }
-
-        let data1 = normalupi.parentElement.parentElement
-        data1.style.maxHeight = "50px"
-
-    })
-
-
-    normalupi.addEventListener("click", function () {
-        if (normalupi.checked == true) {
-            let data = normalupi.parentElement.parentElement
-            data.style.maxHeight = "120px"
-        }
-        let data1 = phonepe.parentElement.parentElement
-        data1.style.maxHeight = "50px"
-    })
-
-    function changeAdress() {
-        let pd = document.getElementById("pin-state")
-        let un = document.getElementById("user-name")
-        let an = document.getElementById("address-number")
-        let pdp = prompt("give pin code and state")
-        let unp = prompt("give name")
-        let ap = prompt("give adress")
-        let np = prompt("give number")
-        pd.innerHTML = `Delivery at ${pdp}`
-        un.innerHTML = unp
-        an.innerHTML = `${ap},Phone:${np}`
+  let phonepe = document.getElementById("phonepe");
+  let normalupi = document.getElementById("normalupi");
+  phonepe.addEventListener("click", function () {
+    if (phonepe.checked == true) {
+      let data = phonepe.parentElement.parentElement;
+      data.style.maxHeight = "120px";
     }
 
-    function addoptions() {
-        let monthoptions = document.getElementById("monthoptions")
-        //adding 12 options for months 
-        for (let i = 1; i <= 12; i++) {
-            let optionn = document.createElement("option")
-            optionn.value = i
-            optionn.textContent = i
-            monthoptions.append(optionn)
-        }
+    let data1 = normalupi.parentElement.parentElement;
+    data1.style.maxHeight = "50px";
+  });
 
-        let yearoptions = document.getElementById("yearoptions")
-        for (let i = 21; i <= 39; i++) {
-            let optionn = document.createElement("option")
-            optionn.value = `20${i}`
-            optionn.textContent = `20${i}`
-            yearoptions.append(optionn)
-        }
+  normalupi.addEventListener("click", function () {
+    if (normalupi.checked == true) {
+      let data = normalupi.parentElement.parentElement;
+      data.style.maxHeight = "120px";
     }
-    addoptions()
+    let data1 = phonepe.parentElement.parentElement;
+    data1.style.maxHeight = "50px";
+  });
 
+  function changeAdress() {
+    let pd = document.getElementById("pin-state");
+    let un = document.getElementById("user-name");
+    let an = document.getElementById("address-number");
+    let pdp = prompt("give pin code and state");
+    let unp = prompt("give name");
+    let ap = prompt("give adress");
+    let np = prompt("give number");
+    pd.innerHTML = `Delivery at ${pdp}`;
+    un.innerHTML = unp;
+    an.innerHTML = `${ap},Phone:${np}`;
+  }
 
+  function addoptions() {
+    let monthoptions = document.getElementById("monthoptions");
+    //adding 12 options for months
+    for (let i = 1; i <= 12; i++) {
+      let optionn = document.createElement("option");
+      optionn.value = i;
+      optionn.textContent = i;
+      monthoptions.append(optionn);
+    }
 
-    let cod = document.getElementById("cod")
-    let paymentdivs = document.getElementById("payment-divs")
-    let data5 = paymentdivs.children
-    cod.addEventListener("click", function () {
+    let yearoptions = document.getElementById("yearoptions");
+    for (let i = 21; i <= 39; i++) {
+      let optionn = document.createElement("option");
+      optionn.value = `20${i}`;
+      optionn.textContent = `20${i}`;
+      yearoptions.append(optionn);
+    }
+  }
+  addoptions();
 
-        for (i = 0; i < data5.length; i++) {
-            data5[i].style.backgroundColor = "white"
-            data5[i].style.borderRight = "1px solid black"
-        }
-        cod.style.backgroundColor = "rgb(242,255,255)"
-        cod.style.borderRight = "4px solid rgb(0,191,191)"
-        let cods = document.getElementById("cods")
-        cods.style.display = "block"
-        let datap = cods.parentElement
-        let data = datap.children
-        for (i = 0; i < data.length; i++) {
-            if (i != 0) {
-                data[i].style.display = "none"
-            }
-        }
-    })
-    let datap = cods.parentElement
-    let data = datap.children
-    cod.style.backgroundColor = "rgb(242,255,255)"
-    cod.style.borderRight = "4px solid rgb(0,191,191)"
+  let cod = document.getElementById("cod");
+  let paymentdivs = document.getElementById("payment-divs");
+  let data5 = paymentdivs.children;
+  cod.addEventListener("click", function () {
+    for (i = 0; i < data5.length; i++) {
+      data5[i].style.backgroundColor = "white";
+      data5[i].style.borderRight = "1px solid black";
+    }
+    cod.style.backgroundColor = "rgb(242,255,255)";
+    cod.style.borderRight = "4px solid rgb(0,191,191)";
+    let cods = document.getElementById("cods");
+    cods.style.display = "block";
+    let datap = cods.parentElement;
+    let data = datap.children;
     for (i = 0; i < data.length; i++) {
-        if (i != 0) {
-            data[i].style.display = "none"
-        }
+      if (i != 0) {
+        data[i].style.display = "none";
+      }
     }
-    let dc = document.getElementById("dc")
-    dc.addEventListener("click", function () {
-
-        for (i = 0; i < data5.length; i++) {
-            data5[i].style.backgroundColor = "white"
-            data5[i].style.borderRight = "1px solid black"
-        }
-        dc.style.backgroundColor = "rgb(242,255,255)"
-        dc.style.borderRight = "5px solid rgb(0,191,191)"
-        let dcs = document.getElementById("dcs")
-        dcs.style.display = "block"
-        let datap = dcs.parentElement
-        let data = datap.children
-        for (i = 0; i < data.length; i++) {
-            if (i != 1) {
-                data[i].style.display = "none"
-            }
-        }
-    })
-    let puu = document.getElementById("puu")
-    puu.addEventListener("click", function () {
-        for (i = 0; i < data5.length; i++) {
-            data5[i].style.backgroundColor = "white"
-            data5[i].style.borderRight = "1px solid black"
-        }
-        puu.style.backgroundColor = "rgb(242,255,255)"
-        puu.style.borderRight = "5px solid rgb(0,191,191)"
-        let puus = document.getElementById("puus")
-        puus.style.display = "block"
-        let datap = puus.parentElement
-        let data = datap.children
-        for (i = 0; i < data.length; i++) {
-            if (i != 2) {
-                data[i].style.display = "none"
-            }
-        }
-    })
+  });
+  let datap = cods.parentElement;
+  let data = datap.children;
+  cod.style.backgroundColor = "rgb(242,255,255)";
+  cod.style.borderRight = "4px solid rgb(0,191,191)";
+  for (i = 0; i < data.length; i++) {
+    if (i != 0) {
+      data[i].style.display = "none";
+    }
+  }
+  let dc = document.getElementById("dc");
+  dc.addEventListener("click", function () {
+    for (i = 0; i < data5.length; i++) {
+      data5[i].style.backgroundColor = "white";
+      data5[i].style.borderRight = "1px solid black";
+    }
+    dc.style.backgroundColor = "rgb(242,255,255)";
+    dc.style.borderRight = "5px solid rgb(0,191,191)";
+    let dcs = document.getElementById("dcs");
+    dcs.style.display = "block";
+    let datap = dcs.parentElement;
+    let data = datap.children;
+    for (i = 0; i < data.length; i++) {
+      if (i != 1) {
+        data[i].style.display = "none";
+      }
+    }
+  });
+  let puu = document.getElementById("puu");
+  puu.addEventListener("click", function () {
+    for (i = 0; i < data5.length; i++) {
+      data5[i].style.backgroundColor = "white";
+      data5[i].style.borderRight = "1px solid black";
+    }
+    puu.style.backgroundColor = "rgb(242,255,255)";
+    puu.style.borderRight = "5px solid rgb(0,191,191)";
+    let puus = document.getElementById("puus");
+    puus.style.display = "block";
+    let datap = puus.parentElement;
+    let data = datap.children;
+    for (i = 0; i < data.length; i++) {
+      if (i != 2) {
+        data[i].style.display = "none";
+      }
+    }
+  });
 </script>
