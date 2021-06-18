@@ -3833,4 +3833,8 @@
         fas[6].style.color = "black"
     })
 
+    var cart_value_healthkart=JSON.parse(localStorage.getItem("in_cart"))
+    var number_cartip=document.getElementById("number_cartip")
+     number_cartip.innerHTML=`${cart_value_healthkart.length}`;
+
 </script>
