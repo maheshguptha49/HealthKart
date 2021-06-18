@@ -76,7 +76,7 @@
               <p style="background-color: rgb(255,255,255);font-size: 18px;">&#8377 <span style="background-color: rgb(255,255,255)" id="take">0</span></p>
             </div>
           </div>
-          <div class="payment">
+          <div class="payment"  id="proceed-to-delivery-address">
             Proceed to pay &#8377 0
           </div>
           <div class="offer">
@@ -477,4 +477,12 @@ kol = JSON.parse(localStorage.getItem("in_cart"));
 var target_mycart= document.getElementById("target_mycart");
 target_mycart.innerHTML=`(${kol.length})`;
 payments(kol);
+
+let proceed_to_delivery_address=document.getElementById("proceed-to-delivery-address")
+
+
+proceed_to_delivery_address.addEventListener("click",proceed_to_login)
+function proceed_to_login(){
+  window.location.href="/healthkartSignUp.html"
+}
 </script>
