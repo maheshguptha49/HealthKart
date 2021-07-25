@@ -506,6 +506,15 @@
   font-size: 14px;
   opacity: 0.6;
 }
+.p12 {
+  background-color: rgb(255, 255, 255);
+  font-weight: 550;
+  font-size: 18px;
+}
+.p13 {
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+}
 
 @media (max-width: 750px) {
   .flexbox {

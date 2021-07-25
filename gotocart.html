@@ -14,16 +14,16 @@
             <div>
                 <div class="logo">HEALT<span>HK</span>ART</div>
             </div>
-            <div style="background-color: rgb(255,255,255);">
-                <div style="background-color: rgb(255,255,255);" >
+            <div class="white">
+                <div class="white" >
                     <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-blue.svg" alt="" />CART
                 </div>
                 <div></div>
-                <div style="background-color: rgb(255,255,255);">
+                <div class="white">
                     <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="" />ADDRESS
                 </div>
                 <div></div>
-                <div style="background-color: rgb(255,255,255);">
+                <div class="white">
                     <img src="https://img5.hkrtcdn.com/react/static/media/checkout/tick-grey.svg" alt="" />PAYMENT
                 </div>
             </div>
@@ -33,7 +33,7 @@
       <div class="left_container">
         <div class="mycart">
           My cart
-          <span id="target_mycart" style="background-color: white">(0)</span>
+          <span id="target_mycart" class="white">(0)</span>
         </div>
         <div id="container_items_cart" class="container_items_cart">
           <!-- <div class="item_div">
@@ -72,8 +72,8 @@
           </div>
           <div class="pay_box">
             <div class="flex1">
-              <p style="background-color: rgb(255,255,255); font-weight: 550; font-size: 18px;">Total Payble</p>
-              <p style="background-color: rgb(255,255,255);font-size: 18px;">&#8377 <span style="background-color: rgb(255,255,255)" id="take">0</span></p>
+              <p class="p12">Total Payble</p>
+              <p class="p13">&#8377 <span class="white" id="take">0</span></p>
             </div>
           </div>
           <div class="payment"  id="proceed-to-delivery-address">
@@ -483,6 +483,6 @@ let proceed_to_delivery_address=document.getElementById("proceed-to-delivery-add
 
 proceed_to_delivery_address.addEventListener("click",proceed_to_login)
 function proceed_to_login(){
-  window.location.href="/healthkartSignUp.html"
+  window.location.href="healthkartSignUp.html"
 }
 </script>
