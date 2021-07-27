@@ -1,7 +1,7 @@
 # HealthKart
 
 
-This is a working clone of the healthkart website, this project has been done in order to learn the basic working of a website by implementing HTML5, CSS3, JavaScript, ES6, JSON, JS DOM and React(Components). Working on this project helps to learn a lot of new things that goes into building a website. This is our collaborative project under the guidance of MASAI Team to facilitate the full stack web development curriculam.  
+This is a working clone of the healthkart website, this project has been done in order to learn the basic working of a website by implementing HTML5, CSS3, JavaScript, JS DOM. Working on this project helps to learn a lot of new things that goes into building a website. This is our collaborative project under the guidance of MASAI Team to facilitate the full stack web development curriculam.  
 
 ## Uses
 
