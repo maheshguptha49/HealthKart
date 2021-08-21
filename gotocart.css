@@ -93,6 +93,8 @@
   margin-right: 36%;
 }
 .ins_small {
+  max-width: 10px;
+  max-height: 14px;
   width: 10%;
   height: 70%;
   border: solid gray thin;
@@ -101,12 +103,16 @@
   background-color: rgb(255, 255, 255);
 }
 .small_1 {
+  max-width: 19px;
+  min-width: 15px;
   float: left;
   width: 20%;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 .small_2 {
+  max-width: 19px;
+  min-width: 15px;
   float: left;
   width: 20%;
   background-color: rgb(255, 255, 255);
@@ -226,11 +232,15 @@
   background-color: rgb(255, 255, 255);
   width: 100%;
 }
+
 .input {
   border: 0;
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid;
   width: 70%;
+}
+.input:focus {
+  outline: none;
 }
 .btn {
   height: 27px;
@@ -277,6 +287,7 @@
   font-weight: 600;
   margin-bottom: 5%;
   box-shadow: 0 0 3px rgb(0 0 0 / 17%);
+  cursor: pointer;
 }
 .white {
   background-color: rgb(255, 255, 255);
@@ -505,6 +516,15 @@
   box-sizing: border-box;
   font-size: 14px;
   opacity: 0.6;
+}
+.p12 {
+  background-color: rgb(255, 255, 255);
+  font-weight: 550;
+  font-size: 18px;
+}
+.p13 {
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
 }
 
 @media (max-width: 750px) {
