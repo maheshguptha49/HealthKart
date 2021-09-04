@@ -10,17 +10,17 @@ We can sign in login,signup,add products to cart,buy prducts
 ## Pages Build
 
 * Landing Page
-
+<img src="https://github.com/Sonamkneelam/HealthKart/blob/main/SITE%20PICTURES/Screenshot%20(10).png" />
 * Multivitamin page
-
+<img src="https://github.com/Sonamkneelam/HealthKart/blob/main/SITE%20PICTURES/Screenshot%20(11).png" />
 * Registration page
-
+<img src="https://github.com/Sonamkneelam/HealthKart/blob/main/SITE%20PICTURES/Screenshot%20(13).png" />
 * Login page
 
 * 2 Payment pages
-
+<img src="https://github.com/Sonamkneelam/HealthKart/blob/main/SITE%20PICTURES/Screenshot%20(14).png" />
 * Cart page
-
+<img src="https://github.com/Sonamkneelam/HealthKart/blob/main/SITE%20PICTURES/Screenshot%20(12).png" />
 * Adress taking page
 
 ## Functionalities Added
